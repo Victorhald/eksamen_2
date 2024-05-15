@@ -1,16 +1,126 @@
 ---
-
+import "../styles/style.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>SICILIANSK IS</h1>
+      <h2>OPLEV ÆGTE HÅNDLAVET SICILIANSK IS</h2>
+      <div class="labels_forside">
+        <div class="norrebro">
+          <p>NØRREBRO</p>
+          <br />
+          <p>
+            Skjolds Plads 2 <br />
+            2200 København N
+          </p>
+          <br />
+          <p>Åbningstider</p>
+          <p>Alle dage kl. 12 - 21</p>
+          <br />
+          <button>FIND PÅ KORT</button>
+        </div>
+        <div class="vesterbro">
+          <p>VESTERBRO</p>
+          <br />
+          <p>Skydebanegade 3 <br /> 1709 København V</p>
+          <br />
+          <p>Åbningstider</p>
+          <p>Alle dage kl. 12 - 21</p>
+          <br />
+          <button>FIND PÅ KORT</button>
+        </div>
+        <div class="vesterbro"></div>
+      </div>
+      <div class="is_priser">
+        <h3>DU FÅR TRE SMAGE ØKOLOGISK SICILIANSK IS UANSET STØRRELSE!</h3>
+        <div class="is_priser_flex">
+          <img class="lilleis" src="/public/img/lilleis.svg" alt="lilleis" />
+          <img class="mellemis" src="/public/img/mellemis.svg" alt="mellemis" />
+          <img class="stor is" src="/public/img/storis.svg" alt="storis" />
+        </div>
+      </div>
+      <div class="gelato">
+        <div>
+          <img src="/public/img/gelato_pige.svg" alt="gelato_pige" />
+        </div>
+        <div>
+          <h3>HJEMMELAVET IS TIL FESTEN</h3>
+          <p>Vil du have lækker, frisklavet Siciliansk is til brylluppet, <br /> fødselsdagen eller firmaarrangementet? <br /> <br /> Lej en Gelato Cool Box og spis alt det is du har lyst til! <br /> <br /> Du skal bare vælge smage, og så klarer vi resten.</p>
+          <button>BESTIL OG LÆS MERE</button>
+        </div>
+      </div>
+      <div class="bestsellers">
+        <h3>PRØV VORES BESTSELLERS</h3>
+        <div class="grid_4">
+          <div>
+            <img src="/public/img/chokolade.svg" alt="" />
+            <p>PISTACIE</p>
+          </div>
+          <div>
+            <img src="/public/img/chokolade.svg" alt="" />
+            <p>HASSELNØD</p>
+          </div>
+          <div>
+            <img src="/public/img/chokolade.svg" alt="" />
+            <p>JORDBÆR SORBET</p>
+          </div>
+          <div>
+            <img src="/public/img/chokolade.svg" alt="" />
+            <p>CHOKOLADE</p>
+          </div>
+        </div>
+        <button>SE ALLE ISVARIANTER</button>
+      </div>
+    </main>
+  </body>
+
+  <style>
+    h1 {
+      background-image: url(/img/citroner.svg);
+      background-size: cover;
+      padding-top: 250px;
+      padding-bottom: 250px;
+      text-align: center;
+    }
+    .labels_forside {
+      display: flex;
+      gap: 100px;
+      text-align: center;
+      justify-content: center;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+    .is_priser_flex {
+      display: flex;
+    }
+    .is_priser,
+    .bestsellers {
+      background-color: #dfebf3;
+    }
+
+    .gelato {
+      display: flex;
+      margin: 80px;
+      gap: 140px;
+    }
+    .grid_4 {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      gap: 100px;
+    }
+  </style>
 </html>
