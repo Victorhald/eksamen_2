@@ -4,11 +4,11 @@ const { data } = Astro.props;
 ---
 
 <a href={`is/${data.slug}`}>
-  <article>
-    <h2>{data.name}</h2>
-
-    <!-- <img class="is_img" src="img/mandarin.webp" alt="billede af is" />  -->
-    <img src={"/img/varianter" + data.image} alt="is" />
+  <article class="produkt_liste">
+    <div>
+      <p>{data.name}</p>
+      <img class="is_img" src={"/img/varianter/" + data.image} alt="is" />
+    </div>
   </article>
 </a>
 <slot />
@@ -16,7 +16,7 @@ const { data } = Astro.props;
 <style>
   .is_img {
     border-radius: 50%;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
   }
 </style>
