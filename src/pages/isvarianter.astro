@@ -1,5 +1,14 @@
 ---
 import "../styles/style.css";
+import Is from "../components/Is.astro";
+import Singleis from "../components/Singleis.astro";
+
+const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtucGFzbm9qbmJybXBwa2JodmhzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4MDI0MzgsImV4cCI6MjAzMTM3ODQzOH0.eV1A8Lk9Z7NfumZ5D9SRoNkwuK49yVj8DYHv3q0-bNM",
+  },
+}).then((response) => response.json());
 ---
 
 <html lang="da">
@@ -12,12 +21,61 @@ import "../styles/style.css";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Margarine&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <header></header>
-      <h1>ISVARIANTER</h1>
+      <header>
+        <nav>
+          <a href="/">Forside</a>
+          <a href="/isvarianter">Isvarianter</a>
+        </nav>
+      </header>
+      <div class="image_container">
+        <img src="img/citroner.svg" alt="Citroner" />
+        <div class="overlay_text">ISVARIANTER</div>
+      </div>
+      <section class="varianter">
+        {
+          data.map((is) => {
+            return <Is data={is} />;
+          })
+        }
+      </section>
     </main>
   </body>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    .produkt_img {
+      border-radius: 50%;
+      height: 250px;
+      width: 250px;
+    }
+
+    .image_container {
+      position: relative;
+      text-align: center;
+      color: white;
+      width: 100%;
+      height: 100%;
+      height: calc(80vh - 300px);
+    }
+
+    .image_container img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      height: calc(80vh - 300px);
+    }
+    .overlay_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: luckiest guy;
+      font-size: 6rem;
+      white-space: nowrap;
+    }
+  </style>
 </html>
