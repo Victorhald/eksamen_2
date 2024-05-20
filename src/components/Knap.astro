@@ -1,0 +1,45 @@
+---
+const button_text = Astro.props.button_text;
+const { variant } = Astro.props;
+---
+
+<div class="button">
+  <a href="" class={variant}>{button_text}</a>
+</div>
+
+<style>
+  .orange {
+    background-color: #e8a965;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    height: 35px;
+    padding: 0 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-family: "Margarine";
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .blaa {
+    background-color: #12375b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    height: 35px;
+    padding: 0 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-family: "Margarine";
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+</style>
