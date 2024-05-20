@@ -44,9 +44,15 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
     </main>
   </body>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       box-sizing: border-box;
     }
+
     .produkt_img {
       border-radius: 50%;
       height: 250px;
@@ -81,6 +87,9 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin: auto;
+    }
+    a:link {
+      text-decoration: none;
     }
   </style>
 </html>
