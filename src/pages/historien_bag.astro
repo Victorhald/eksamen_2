@@ -8,7 +8,7 @@ import "../styles/style.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Index</title>
+    <title>Historien Bag</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Margarine&display=swap" rel="stylesheet" />
@@ -21,10 +21,10 @@ import "../styles/style.css";
 
       <div class="grid_1_1">
         <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequatur est rerum quo sequi reprehenderit accusamus nam corrupti modi porro nostrum illo, vitae inventore nihil eveniet ducimus nisi facere? Voluptatum.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequatur est rerum quo sequi reprehenderit accusamus nam corrupti modi porro nostrum illo, vitae inventore nihil eveniet ducimus nisi facere? Voluptatum. <br /> <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, molestiae! Possimus a impedit ea vel placeat quasi quisquam, delectus, nostrum voluptatibus necessitatibus adipisci dolor eaque dolore veritatis alias illo sint.</p>
         </div>
         <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequatur est rerum quo sequi reprehenderit accusamus nam corrupti modi porro nostrum illo, vitae inventore nihil eveniet ducimus nisi facere? Voluptatum.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequatur est rerum quo sequi reprehenderit accusamus nam corrupti modi porro nostrum illo, vitae inventore nihil eveniet ducimus nisi facere? Voluptatum. <br /> <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit laboriosam velit reprehenderit doloribus molestiae eos, voluptatem quaerat dicta sit.</p>
         </div>
       </div>
 
@@ -35,7 +35,8 @@ import "../styles/style.css";
       <div class="grid_1_1">
         <div>
           <h2>Sicilien</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, nobis earum dolor totam, veniam illo odit explicabo fuga ut, dolorem perspiciatis voluptatem magnam! Excepturi unde tenetur, rem fugit possimus neque.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, nobis earum dolor totam, veniam illo odit explicabo fuga ut, dolorem perspiciatis voluptatem magnam! Excepturi unde tenetur, rem fugit possimus neque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro recusandae enim praesentium mollitia, doloribus voluptates at eius reprehenderit dicta illum laborum quasi corrupti.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laboriosam obcaecati odio eos natus hic accusantium a tempore beatae aliquam provident vel quis eaque ullam sapiente, nihil dolore id perferendis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, similique maiores fuga officia ipsum est, aperiam odit.</p>
         </div>
 
         <div>
@@ -43,7 +44,7 @@ import "../styles/style.css";
         </div>
       </div>
 
-      <div>
+      <div class="banner_div">
         <img src="/img/banner.png" alt="Banner" class="banner" />
       </div>
       <footer></footer>
@@ -56,5 +57,61 @@ import "../styles/style.css";
     background-image: url(/img/citroner.svg);
     padding: 20% 10%;
     stroke: orange;
+  }
+
+  p {
+    padding: 5% 7%;
+    line-height: 2;
+    font-weight: 200;
+  }
+
+  h2 {
+    padding: 7% 7% 0 7%;
+  }
+
+  .grid_1_1 {
+    padding: 8% 3%;
+  }
+
+  .is {
+    display: flex;
+    width: 60%;
+    margin: 5% auto;
+    padding-bottom: 5%;
+  }
+
+  .banner_div {
+    background-color: #dfebf3;
+    padding: 10% 0;
+  }
+
+  @media (min-width: 600px) {
+    .grid_1_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 10% 3%;
+    }
+
+    h2 {
+      padding-bottom: 5%;
+    }
+    .is {
+      width: 80%;
+      padding-top: 25%;
+    }
+  }
+  @media (min-width: 768px) {
+    h1 {
+      padding: 8% 5%;
+    }
+
+    .grid_1_1 {
+      padding: 5% 3%;
+    }
+
+    .is {
+      width: 60%;
+      padding-top: 20%;
+    }
   }
 </style>
