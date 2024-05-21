@@ -1,5 +1,6 @@
 ---
 import "../styles/style.css";
+import Knap from "../components/Knap.astro";
 ---
 
 <html lang="en">
@@ -31,7 +32,7 @@ import "../styles/style.css";
       <div class="labels_forside">
         <div class="norrebro">
           <h2>NØRREBRO</h2>
-          <br />
+          <hr />
           <p class="p_labels">
             Skjolds Plads 2 <br />
             2200 København N
@@ -40,17 +41,17 @@ import "../styles/style.css";
           <p class="p_labels aabninstider">Åbningstider</p>
           <p class="p_labels">Alle dage kl. 12 - 21</p>
           <br />
-          <button class="findpåkort">FIND PÅ KORT</button>
+          <Knap button_text="FIND PÅ KORT" variant="orange" />
         </div>
         <div class="vesterbro">
           <h2>VESTERBRO</h2>
-          <br />
+          <hr />
           <p class="p_labels">Skydebanegade 3 <br /> 1709 København V</p>
           <br />
           <p class="p_labels aabninstider">Åbningstider</p>
           <p class="p_labels">Alle dage kl. 12 - 21</p>
           <br />
-          <button class="findpåkort">FIND PÅ KORT</button>
+          <Knap button_text="FIND PÅ KORT" variant="orange" />
         </div>
       </div>
       <div class="is_priser">
@@ -72,7 +73,9 @@ import "../styles/style.css";
         <div>
           <img class="gelatopige" src="/public/img/gelato_pige.svg" alt="gelato_pige" />
         </div>
-        <button>BESTIL OG LÆS MERE</button>
+        <div class="button">
+          <Knap button_text="BESTIL OG LÆS MERE" variant="blaa" class="button" />
+        </div>
       </div>
       <div class="bestsellers">
         <h3>PRØV VORES BESTSELLERS</h3>
@@ -94,18 +97,28 @@ import "../styles/style.css";
             <h4>CHOKOLADE</h4>
           </div>
         </div>
-        <button>SE ALLE ISVARIANTER</button>
+        <div class="button">
+          <Knap button_text="SE ALLE ISVARIANTER" variant="orange" />
+        </div>
       </div>
     </main>
   </body>
 
   <style>
     h1 {
-      background-image: url(/img/citroner.svg);
+      background-image: url(/img/spiseris.png);
       background-size: cover;
       padding-top: 100px;
       padding-bottom: 100px;
       text-align: center;
+    }
+
+    hr {
+      border: none; /* Fjern standardkant */
+      height: 1px; /* Indstil tykkelsen af linjen */
+      background-color: #12375b; /* Vælg farven på linjen */
+      width: 120px; /* Indstil bredden på linjen */
+      margin: 20px auto; /* Centrer linjen og tilføj margin over og under */
     }
     .h2_forside {
       text-align: center;
@@ -132,9 +145,13 @@ import "../styles/style.css";
       line-height: 30px;
     }
     .hjemmelavetis,
-    button,
+    .button,
     h4 {
       margin-left: 24px;
+    }
+
+    .button {
+      margin-bottom: 60px;
     }
 
     .findpåkort {
@@ -173,6 +190,9 @@ import "../styles/style.css";
       padding-top: 7px;
     }
 
+    .bestsellers {
+      padding-bottom: 3px;
+    }
     .grid_4 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -183,10 +203,11 @@ import "../styles/style.css";
     .norrebro,
     .vesterbro {
       width: 155px;
-      height: 250px;
+      height: 290px;
       background-color: #ffffff;
       border-radius: 25px;
       padding-top: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .aabninstider {
