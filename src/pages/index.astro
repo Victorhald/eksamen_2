@@ -70,17 +70,18 @@ import Blandetis from "../components/Blandetis.astro";
       </div>
       <div class="gelato">
         <div>
-          <h3>HJEMMELAVET IS TIL FESTEN</h3>
+          <h3 class="h3">HJEMMELAVET IS TIL FESTEN</h3>
           <p class="hjemmelavetis">Vil du have lækker, frisklavet Siciliansk is til brylluppet, fødselsdagen eller firmaarrangementet? <br /> Lej en Gelato Cool Box og spis alt det is du har lyst til! <br /> Du skal bare vælge smage, og så klarer vi resten.</p>
         </div>
         <div>
           <img class="gelatopige" src="/public/img/gelato_pige.svg" alt="gelato_pige" />
         </div>
-        <div class="button">
-          <Knap button_text="BESTIL OG LÆS MERE" variant="blaa" class="button" />
-        </div>
-        <Blandetis sizeandplace="index" />
       </div>
+      <div class="button">
+        <Knap button_text="BESTIL OG LÆS MERE" variant="blaa" class="button" />
+      </div>
+      <Blandetis sizeandplace="index" />
+
       <div class="bestsellers">
         <h3>PRØV VORES BESTSELLERS</h3>
         <div class="grid_4">
@@ -228,12 +229,22 @@ import Blandetis from "../components/Blandetis.astro";
         margin-top: 80px;
         margin-bottom: 80px;
       }
-
+      .hjemmelavetis {
+        margin-left: 104px;
+      }
+      .button {
+        margin-left: 104px;
+      }
       .gelato {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 80px;
         gap: 140px;
+      }
+
+      .gelatopige img {
+        width: 468px;
+        height: 512px;
+        margin-left: 0;
       }
       .grid_4 {
         display: flex;
@@ -248,11 +259,33 @@ import Blandetis from "../components/Blandetis.astro";
 
       .norrebro,
       .vesterbro {
-        width: 641px;
-        height: 534px;
+        width: 400px;
+        height: 440px;
         background-color: #ffffff;
         border-radius: 25px;
-        padding-top: 100px;
+        padding-top: 37px;
+      }
+
+      h2 {
+        padding-top: 20px;
+      }
+      h3 {
+        width: 1200px;
+        margin-left: 104px;
+      }
+      .h3 {
+        width: 450px;
+        margin-left: 104px;
+      }
+      .lilleis {
+        width: 416px;
+      }
+      .mellemis {
+        width: 462px;
+      }
+
+      .storis {
+        width: 520px;
       }
     }
   </style>
