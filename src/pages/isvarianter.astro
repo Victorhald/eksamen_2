@@ -31,9 +31,20 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
         </nav>
       </header>
       <div class="image_container">
-        <img src="img/citroner.svg" alt="Citroner" />
+        <div class="billeder">
+          <img src="img/citroner.svg" alt="Citroner" />
+        </div>
         <div class="overlay_text">ISVARIANTER</div>
+        <div class="overlay_text_1">
+          Indeholder Nødder
+          <img class="billede_2" src="img/nut.png" alt="nut" />
+        </div>
+        <div class="overlay_text_2">
+          Vegansk
+          <img class="billede_1" src="img/vegan.png" alt="vegan" />
+        </div>
       </div>
+
       <section class="varianter">
         {
           data.map((is) => {
@@ -49,8 +60,11 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       padding: 0;
       box-sizing: border-box;
     }
+    .billeder {
+    }
     body {
       box-sizing: border-box;
+      background-color: #dfebf3;
     }
 
     .produkt_img {
@@ -74,6 +88,15 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       height: 100%;
       height: calc(80vh - 300px);
     }
+    .billede_1 {
+      height: 10px !important;
+      width: 10px !important;
+    }
+    .billede_2 {
+      height: 10px !important;
+      width: 10px !important;
+    }
+
     .overlay_text {
       position: absolute;
       top: 50%;
@@ -83,6 +106,25 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       font-size: 2.5rem;
       white-space: nowrap;
     }
+    .overlay_text_1 {
+      position: absolute;
+      top: 80%;
+      left: 10%;
+
+      font-family: luckiest guy;
+      font-size: 1rem;
+      white-space: nowrap;
+      background-image: url(/img/vegan.jpg);
+    }
+    .overlay_text_2 {
+      position: absolute;
+      top: 70%;
+      left: 10%;
+
+      font-family: luckiest guy;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
     .varianter {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -90,6 +132,14 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
     }
     a:link {
       text-decoration: none;
+    }
+
+    @media (min-width: 600px) {
+      .varianter {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+      }
     }
   </style>
 </html>
