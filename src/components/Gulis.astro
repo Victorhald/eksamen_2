@@ -1,3 +1,27 @@
-const {size}
+---
+const { sizeandplace } = Astro.props;
+---
 
-<div class={size} id="stjerne_container"><div id="stjerne_sprite"></div></div>
+<div class={sizeandplace} id="gulis_container">
+  <div id="gulis_sprite"></div>
+</div>
+
+<style>
+  #gulis_container {
+    aspect-ratio: 73/121;
+  }
+
+  #gulis_sprite {
+    background-image: url(/img/gulis.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .index {
+    aspect-ratio: 73/121;
+    width: 80px;
+    position: absolute;
+    top: 600px;
+  }
+</style>
