@@ -3,6 +3,8 @@ import "../styles/style.css";
 import Knap from "../components/Knap.astro";
 import Gulis from "../components/Gulis.astro";
 import Blandetis from "../components/Blandetis.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -18,17 +20,10 @@ import Blandetis from "../components/Blandetis.astro";
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <Header />
+    </header>
     <main>
-      <header>
-        <nav>
-          <a href="/">Forside</a>
-          <a href="/isvarianter">Isvarianter</a>
-          <a href="/historien_bag">Historien Bag</a>
-          <a href="/kontakt_os">Kontakt Os</a>
-          <a href="/gelato">Lej Coolbox</a>
-          <a href="/job">Job</a>
-        </nav>
-      </header>
       <h1>SICILIANSK IS</h1>
       <h2 class="h2_forside">OPLEV ÆGTE HÅNDLAVET SICILIANSK IS</h2>
       <div class="labels_forside">
@@ -107,6 +102,9 @@ import Blandetis from "../components/Blandetis.astro";
         </div>
       </div>
     </main>
+    <footer>
+      <Footer />
+    </footer>
   </body>
 
   <style>
@@ -119,11 +117,11 @@ import Blandetis from "../components/Blandetis.astro";
     }
 
     hr {
-      border: none; /* Fjern standardkant */
-      height: 1px; /* Indstil tykkelsen af linjen */
-      background-color: #12375b; /* Vælg farven på linjen */
-      width: 120px; /* Indstil bredden på linjen */
-      margin: 20px auto; /* Centrer linjen og tilføj margin over og under */
+      border: none;
+      height: 1px;
+      background-color: #12375b;
+      width: 120px;
+      margin: 20px auto;
     }
     .h2_forside {
       text-align: center;
