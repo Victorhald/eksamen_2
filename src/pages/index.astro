@@ -100,7 +100,7 @@ import Footer from "../components/Footer.astro";
           </div>
         </div>
         <div class="button">
-          <a href=""> <Knap button_text="SE ALLE ISVARIANTER" variant="orange" /></a>
+          <a href="/isvarianter"> <Knap button_text="SE ALLE ISVARIANTER" variant="orange" class="button_orange" /></a>
         </div>
       </div>
     </main>
@@ -159,7 +159,6 @@ import Footer from "../components/Footer.astro";
 
     .button {
       margin-bottom: 60px;
-      transform: scale(1);
     }
 
     .findpåkort {
@@ -211,7 +210,9 @@ import Footer from "../components/Footer.astro";
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 50px;
-      margin: 24px;
+      place-items: center;
+      margin-left: 50px;
+      margin-right: 50px;
     }
 
     .norrebro,
@@ -226,6 +227,78 @@ import Footer from "../components/Footer.astro";
 
     .aabninstider {
       font-weight: 1000;
+    }
+
+    @media (min-width: 768px) {
+      .lilleis {
+        width: 160px;
+        margin-left: 0;
+      }
+      .lilleis_tekst {
+        margin-left: 0;
+      }
+
+      .mellemis {
+        width: 180px;
+      }
+
+      .storis {
+        width: 210px;
+      }
+      .is_priser_grid {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+      h3 {
+        width: 600px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+      }
+      .hjemmelavetis {
+        margin-left: 50px;
+      }
+      .button {
+        margin-left: 50px;
+      }
+      .grid_4 {
+        place-items: center;
+      }
+      .gelato {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+      }
+      .gelatopige {
+        width: 270px;
+        height: 450px;
+        margin-left: 0;
+        padding-top: 0;
+        margin-right: 50px;
+        gap: 0;
+      }
+      .h3 {
+        width: 400px;
+        padding-top: 40px;
+      }
+      h4 {
+        text-align: center;
+        margin-left: 0;
+        padding-top: 20px;
+      }
+      .norrebro,
+      .vesterbro {
+        width: 220px;
+        height: 310px;
+        background-color: #ffffff;
+        border-radius: 25px;
+        padding-top: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .button_orange {
+        margin-top: 30px;
+      }
+      .grid_4 img {
+        width: 200px;
+      }
     }
 
     @media (min-width: 1024px) {
