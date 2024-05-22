@@ -1,0 +1,35 @@
+---
+const { sizeandplace } = Astro.props;
+---
+
+<div class={sizeandplace} id="blandetis_container">
+  <div id="blandetis_sprite"></div>
+</div>
+
+<style>
+  #blandetis_container {
+    aspect-ratio: 113/157;
+  }
+
+  #blandetis_sprite {
+    background-image: url(/img/blandetis.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .index {
+    aspect-ratio: 113/157;
+    width: 100px;
+    position: absolute;
+    top: 1482px;
+    left: 290px;
+  }
+  @media (min-width: 600px) {
+    .index {
+      width: 200px;
+      top: 2170px;
+      left: 1090px;
+    }
+  }
+</style>
