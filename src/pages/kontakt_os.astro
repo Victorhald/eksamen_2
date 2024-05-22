@@ -1,5 +1,6 @@
 ---
 import "../styles/style.css";
+import Knap from "../components/Knap.astro";
 ---
 
 <html lang="en">
@@ -35,66 +36,67 @@ import "../styles/style.css";
 
           <label for="message">Besked</label>
           <textarea id="message" name="message" rows="4" required></textarea>
-
-          <button type="submit">Send</button>
+          <div class="button">
+            <Knap button_text="SEND" variant="orange" class="button" />
+          </div>
+          <footer></footer>
         </form>
       </div>
+
+      <style>
+        h1 {
+          background-image: url(/img/citroner.svg);
+          padding: 20% 10%;
+          stroke: orange;
+        }
+
+        p {
+          padding: 5% 7%;
+          line-height: 2;
+          font-weight: 200;
+        }
+
+        body {
+          background-color: #f2f7fa;
+        }
+
+        .form-container {
+          padding: 20px 7%;
+          border-radius: 10px;
+        }
+
+        .form-container input,
+        .form-container textarea,
+        .form-container button {
+          display: block;
+          width: 100%;
+          margin-bottom: 35px;
+          padding: 10px;
+          border: 0px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container button {
+          background-color: #ecac67;
+          color: white;
+          cursor: pointer;
+          border: none;
+          width: 20%;
+          margin-top: 20px;
+        }
+
+        .form-container button:hover {
+          background-color: #ecac6796;
+        }
+
+        label,
+        button {
+          font-family: "Margarine";
+          margin-bottom: 20epx;
+        }
+      </style>
     </main>
-    <footer></footer>
   </body>
 </html>
-
-<style>
-  h1 {
-    background-image: url(/img/citroner.svg);
-    padding: 20% 10%;
-    stroke: orange;
-  }
-
-  p {
-    padding: 5% 7%;
-    line-height: 2;
-    font-weight: 200;
-  }
-
-  body {
-    background-color: #f2f7fa;
-  }
-
-  .form-container {
-    padding: 20px 7%;
-    border-radius: 10px;
-  }
-
-  .form-container input,
-  .form-container textarea,
-  .form-container button {
-    display: block;
-    width: 100%;
-    margin-bottom: 35px;
-    padding: 10px;
-    border: 0px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .form-container button {
-    background-color: #ecac67;
-    color: white;
-    cursor: pointer;
-    border: none;
-    width: 20%;
-    margin-top: 20px;
-  }
-
-  .form-container button:hover {
-    background-color: #ecac6796;
-  }
-
-  label,
-  button {
-    font-family: "Margarine";
-    margin-bottom: 20epx;
-  }
-</style>

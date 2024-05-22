@@ -1,0 +1,130 @@
+---
+import "../styles/style.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Margarine&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Forside</a>
+        <a href="/isvarianter">Isvarianter</a>
+        <a href="/historien_bag">Historien Bag</a>
+        <a href="/kontakt_os">Kontakt Os</a>
+        <a href="/gelato">Lej Coolbox</a>
+        <a href="/workshop">Workshop</a>
+        <a href="/job">Job</a>
+      </nav>
+    </header>
+    <main>
+      <h1>SØG JOB HOS OS</h1>
+      <div class="grid_job">
+        <p>Vi søger lige nu issælgere til sæsonen 2024. <br /> <br /> Sommeren nærmer sig, og vi er i den forbindelse ved at sammensætte det bedste team af issælgere, til at give vores kunder en uforglemmelig isoplevelse! <br /> <br /> Hvis du har lyst til at være en del af et dynamisk team, hvor du kan bidrage med god energi og kundeservice, søger vi måske dig?</p>
+        <div class="faded_box">
+          <div class="content">
+            <h4>DET FORVENTES AT:</h4>
+            <br />
+            <ul class="punktliste">
+              <li>Du er serviceorienteret</li>
+              <li>Du er fleksibel</li>
+              <li>Du kan arbejde godt i et team og under pres</li>
+              <li>Du kan arbejde fra maj - september 2024</li>
+              <li>Elsker is!</li>
+              <br />
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="tyk_tekst">Hvis du har lyst til at være med, så send en kort ansøgning og CV til mail@sicilianskis.dk</p>
+      </div>
+    </main>
+  </body>
+</html>
+<footer></footer>
+
+<style>
+  body {
+    background-color: #f2f7fa;
+  }
+  h1 {
+    background-image: url(/img/spiseris.png);
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  p {
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+  }
+  .faded_box {
+    position: relative;
+    left: 44px;
+    width: 300px;
+    height: 290px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Skygge omkring boksen */
+    overflow: hidden; /* Skjul eventuelt overskydende billede */
+    background: white;
+    border-radius: 25px;
+  }
+
+  /* Indholdet i boksen */
+  .content {
+    position: relative;
+    z-index: 2; /* Sørg for at teksten er foran billedet */
+    padding: 20px;
+  }
+  li {
+    font-family: system-ui, sans-serif;
+    font-size: 0.8rem;
+    line-height: 2;
+    font-weight: 200;
+  }
+  .punktliste {
+    list-style-type: disc; /* Typen af punktopstilling: disc, circle, square, none */
+    padding-left: 20px; /* Indrykning fra venstre */
+  }
+  .punktliste li {
+    margin-bottom: 5px; /* Afstand mellem punkterne */
+  }
+  h4 {
+    text-align: center;
+  }
+  .tyk_tekst {
+    font-weight: 500;
+  }
+
+  @media (min-width: 600px) {
+    .grid_job {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .faded_box {
+      top: 70px;
+      left: 60px;
+      width: 450px;
+      height: 290px;
+    }
+    li {
+      font-size: 1rem;
+    }
+
+    p {
+      margin-top: 20px;
+      line-height: 35px;
+    }
+  }
+</style>
