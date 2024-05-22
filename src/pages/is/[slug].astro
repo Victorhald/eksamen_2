@@ -41,12 +41,16 @@ console.log(myData);
       </div>
       <Singleis>
         <div class="om_is">
-          <h4>Om vores {myData.name} is</h4>
-          <p class="produkt_p">{myData.description}</p>
-        </div>
+          <div>
+            <h4>Om vores {myData.name} is</h4>
+            <p class="produkt_p">{myData.description}</p>
+          </div>
 
-        <p><h4>Ingredienser</h4>{myData.Ingredienser}</p>
-        <div class="allergi_div"><p><h4>Allergi</h4>{myData.allergy}</p></div>
+          <div>
+            <p><h4>Ingredienser</h4>{myData.Ingredienser}</p>
+            <div class="allergi_div"><p><h4>Allergi</h4>{myData.allergy}</p></div>
+          </div>
+        </div>
 
         <div class="produkt_billede_div"><img class="produkt_img" src={"/public/img/varianter/" + myData.image} alt="is" /></div>
       </Singleis>
@@ -55,6 +59,8 @@ console.log(myData);
   <style>
     body {
       background-color: #dfebf3;
+    }
+    .om_is {
     }
     .image_container {
       position: relative;
@@ -115,7 +121,7 @@ console.log(myData);
     .produkt_p {
       max-width: 400px;
     }
-    @media (min-width: 600px) {
+    @media (min-width: 800px) {
       .produkt_img {
         width: 300px;
         height: 300px;
