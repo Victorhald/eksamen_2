@@ -51,7 +51,7 @@ p {
   letter-spacing: 0.5px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   h1 {
     font-size: 6rem;
     text-shadow: -4px -4px 0 #ea9942, 4px -4px 0 #ea9942, -4px 4px 0 #ea9942, 4px 4px 0 #ea9942, 4px 0 0 #ea9942, -4px 0 0 #ea9942, 0 4px 0 #ea9942, 0 -4px 0 #ea9942;
