@@ -1,6 +1,7 @@
 ---
 import Is from "../../components/Is.astro";
 import Singleis from "../../components/Singleis.astro";
+import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
   const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
@@ -48,12 +49,14 @@ console.log(myData);
 
           <div>
             <p><h4>Ingredienser</h4>{myData.Ingredienser}</p>
-            <div class="allergi_div"><p><h4>Allergi</h4>{myData.allergy}</p></div>
           </div>
         </div>
 
-        <div class="produkt_billede_div"><img class="produkt_img" src={"/public/img/varianter/" + myData.image} alt="is" /></div>
+        <div class="produkt_billede_div">
+          <img class="produkt_img" src={"/public/img/varianter/" + myData.image} alt="is" />
+        </div>
       </Singleis>
+      <Footer />
     </main>
   </body>
   <style>
@@ -115,7 +118,7 @@ console.log(myData);
       z-index: 1;
       position: relative;
       justify-content: right;
-      bottom: 370px;
+      bottom: 320px;
       right: 20px;
     }
     .produkt_p {
@@ -132,7 +135,7 @@ console.log(myData);
         z-index: 1;
         position: relative;
         justify-content: right;
-        bottom: 340px;
+        bottom: 570px;
         right: 20px;
       }
     }

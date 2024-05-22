@@ -11,7 +11,7 @@ const { data } = Astro.props;
       <img class="is_img" src={"/img/varianter/" + data.image} alt="is" />
       <div class="allergy_img_container">
         <h4>{data.name}</h4>
-        <img class="allergy" src={"/img/" + data.allergy} alt="is" />
+        <img class="allergy" src={data.allergyy} alt="is" />
       </div>
     </div>
   </article>
@@ -45,7 +45,7 @@ const { data } = Astro.props;
     margin-bottom: 25px;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     .is_img {
       border-radius: 50%;
       width: 250px;
