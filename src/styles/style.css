@@ -17,6 +17,7 @@ h1 {
   font-family: "Luckiest Guy";
   color: white;
   letter-spacing: 0.5px;
+  text-shadow: -2px -2px 0 #ea9942, 2px -2px 0 #ea9942, -2px 2px 0 #ea9942, 2px 2px 0 #ea9942, 2px 0 0 #ea9942, -2px 0 0 #ea9942, 0 2px 0 #ea9942, 0 -2px 0 #ea9942;
 }
 
 h2 {
@@ -52,6 +53,7 @@ p {
 @media (min-width: 600px) {
   h1 {
     font-size: 6rem;
+    text-shadow: -4px -4px 0 #ea9942, 4px -4px 0 #ea9942, -4px 4px 0 #ea9942, 4px 4px 0 #ea9942, 4px 0 0 #ea9942, -4px 0 0 #ea9942, 0 4px 0 #ea9942, 0 -4px 0 #ea9942;
   }
 
   h2 {

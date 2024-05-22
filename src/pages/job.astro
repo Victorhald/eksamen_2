@@ -1,5 +1,6 @@
 ---
 import "../styles/style.css";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -46,12 +47,14 @@ import "../styles/style.css";
         </div>
       </div>
       <div>
-        <p class="tyk_tekst">Hvis du har lyst til at være med, så send en kort ansøgning og CV til mail@sicilianskis.dk</p>
+        <p class="tyk_tekst">Hvis du har lyst til at være med, så send en kort <br /> ansøgning og CV til mail@sicilianskis.dk</p>
       </div>
     </main>
+    <footer>
+      <Footer />
+    </footer>
   </body>
 </html>
-<footer></footer>
 
 <style>
   body {
@@ -62,7 +65,7 @@ import "../styles/style.css";
     background-size: cover;
     padding-top: 100px;
     padding-bottom: 100px;
-    text-align: center;
+    padding-left: 20px;
   }
   p {
     margin-top: 24px;
@@ -105,16 +108,20 @@ import "../styles/style.css";
   }
   .tyk_tekst {
     font-weight: 500;
+    margin-bottom: 50px;
   }
 
   @media (min-width: 600px) {
+    h1 {
+      padding-left: 100px;
+    }
     .grid_job {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
     .faded_box {
-      top: 70px;
-      left: 60px;
+      top: 100px;
+      left: 120px;
       width: 450px;
       height: 290px;
     }
@@ -123,8 +130,14 @@ import "../styles/style.css";
     }
 
     p {
-      margin-top: 20px;
+      margin-top: 80px;
       line-height: 35px;
+      margin-left: 104px;
+    }
+
+    .tyk_tekst {
+      margin-top: 50px;
+      margin-bottom: 100px;
     }
   }
 </style>
