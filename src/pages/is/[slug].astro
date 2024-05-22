@@ -1,6 +1,7 @@
 ---
 import Is from "../../components/Is.astro";
 import Singleis from "../../components/Singleis.astro";
+import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import "../../styles/style.css";
 
@@ -36,20 +37,24 @@ console.log(myData);
   </head>
   <body>
     <main>
-      <header></header>
+      <header>
+        <Header />
+      </header>
       <div class="image_container">
         <img src="/public/img/citroner.svg" alt="Citroner" />
-        <div class="overlay_text">{myData.name}</div>
+        <div class="overlay_text">
+          <h1>{myData.name}</h1>
+        </div>
       </div>
       <Singleis>
         <div class="om_is">
           <div>
-            <h4>Om vores {myData.name} is</h4>
             <p class="produkt_p">{myData.description}</p>
           </div>
 
-          <div>
-            <p><h4>Ingredienser</h4>{myData.Ingredienser}</p>
+          <div class="ingredienser_div_label">
+            <h4 class="ingrediens_h4">Ingredienser</h4>
+            <p class="ingrediens_p">{myData.Ingredienser}</p>
           </div>
         </div>
 
@@ -57,14 +62,14 @@ console.log(myData);
           <img class="produkt_img" src={"/public/img/varianter/" + myData.image} alt="is" />
         </div>
       </Singleis>
+      <Footer />
     </main>
   </body>
   <style>
     body {
       background-color: #dfebf3;
     }
-    .om_is {
-    }
+
     .image_container {
       position: relative;
       text-align: center;
@@ -72,6 +77,9 @@ console.log(myData);
       width: 100%;
       height: 100%;
       height: calc(80vh - 300px);
+    }
+    .ingrediens_h4 {
+      text-align: center;
     }
     .image_container img {
       object-fit: cover;
@@ -96,18 +104,6 @@ console.log(myData);
       height: calc(80vh - 300px);
     }
 
-    /*   .produkt_img {
-      display: flex;
-      position: absolute;
-      border-radius: 50%;
-      height: 250px;
-      width: 250px;
-    }
-    .produkt_billede_div {
-      position: relative;
-      top: -100px;
-    } */
-
     .produkt_img {
       width: 200px;
       height: 200px;
@@ -118,13 +114,28 @@ console.log(myData);
       z-index: 1;
       position: relative;
       justify-content: right;
-      bottom: 320px;
+      bottom: 580px;
       right: 20px;
     }
     .produkt_p {
-      max-width: 400px;
+      margin-left: 24px;
+      max-width: 180px;
     }
-    @media (min-width: 800px) {
+    .ingredienser_div_label {
+      margin-top: 50px;
+      margin-left: 24px;
+      width: 255px;
+      height: 200px;
+      background-color: #ffffff;
+      border-radius: 25px;
+      padding-top: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .ingredienser_div_label p {
+      text-align: center;
+    }
+    @media (min-width: 600px) {
       .produkt_img {
         width: 300px;
         height: 300px;
@@ -135,8 +146,24 @@ console.log(myData);
         z-index: 1;
         position: relative;
         justify-content: right;
-        bottom: 570px;
+        bottom: 440px;
         right: 20px;
+      }
+      .produkt_p {
+        max-width: 500px;
+      }
+
+      .om_is {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .ingredienser_div_label {
+        width: 255px;
+        height: 290px;
+        background-color: #ffffff;
+        border-radius: 25px;
+        padding-top: 25px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
     }
   </style>

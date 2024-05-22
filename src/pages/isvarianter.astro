@@ -1,7 +1,8 @@
 ---
 import Is from "../components/Is.astro";
 import Footer from "../components/Footer.astro";
-import Singleis from "../components/Singleis.astro";
+import Header from "../components/Header.astro";
+
 import "../styles/style.css";
 
 const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
@@ -26,10 +27,7 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
   <body>
     <main>
       <header>
-        <nav>
-          <a href="/">Forside</a>
-          <a href="/isvarianter">Isvarianter</a>
-        </nav>
+        <Header />
       </header>
       <div class="image_container">
         <div class="billeder">
@@ -53,6 +51,7 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
           })
         }
       </section>
+      <Footer />
     </main>
   </body>
   <style>
