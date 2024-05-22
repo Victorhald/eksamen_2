@@ -38,7 +38,7 @@ import Footer from "../components/Footer.astro";
           <p class="p_labels aabninstider">Åbningstider</p>
           <p class="p_labels">Alle dage kl. 12 - 21</p>
           <br />
-          <Knap button_text="FIND PÅ KORT" variant="orange" />
+          <a href=""><Knap button_text="FIND PÅ KORT" variant="orange" /></a>
         </div>
         <div class="vesterbro">
           <h2>VESTERBRO</h2>
@@ -48,17 +48,17 @@ import Footer from "../components/Footer.astro";
           <p class="p_labels aabninstider">Åbningstider</p>
           <p class="p_labels">Alle dage kl. 12 - 21</p>
           <br />
-          <Knap button_text="FIND PÅ KORT" variant="orange" />
+          <a href=""><Knap button_text="FIND PÅ KORT" variant="orange" /></a>
         </div>
       </div>
       <Gulis sizeandplace="index" />
       <div class="is_priser">
         <h3>DU FÅR TRE SMAGE ØKOLOGISK SICILIANSK IS UANSET STØRRELSE!</h3>
         <div class="is_priser_grid">
-          <img class="lilleis" src="/public/img/lilleis.svg" alt="lilleis" />
-          <img class="mellemis" src="/public/img/mellemis.svg" alt="mellemis" />
-          <img class="storis" src="/public/img/storis.svg" alt="storis" />
-          <p>Lille is</p>
+          <img class="lilleis" src="public/img/lilleis.svg" alt="lilleis" />
+          <img class="mellemis" src="public/img/mellemis.svg" alt="mellemis" />
+          <img class="storis" src="public/img/storis.svg" alt="storis" />
+          <p class="lilleis_tekst">Lille is</p>
           <p>Mellem is</p>
           <p>Stor is</p>
         </div>
@@ -66,39 +66,41 @@ import Footer from "../components/Footer.astro";
       <div class="gelato">
         <div>
           <h3 class="h3">HJEMMELAVET IS TIL FESTEN</h3>
-          <p class="hjemmelavetis">Vil du have lækker, frisklavet Siciliansk is til brylluppet, fødselsdagen eller firmaarrangementet? <br /> Lej en Gelato Cool Box og spis alt det is du har lyst til! <br /> Du skal bare vælge smage, og så klarer vi resten.</p>
+          <p class="hjemmelavetis">Vil du have lækker, frisklavet Siciliansk is til brylluppet, fødselsdagen eller firmaarrangementet? <br /> <br /> Lej en Gelato Cool Box og spis alt det is du har lyst til! <br /> <br /> Du skal bare vælge smage, og så klarer vi resten.</p>
+          <div class="button">
+            <a href=""><Knap button_text="BESTIL OG LÆS MERE" variant="blaa" class="button" /></a>
+          </div>
         </div>
+
         <div>
           <img class="gelatopige" src="/public/img/gelato_pige.svg" alt="gelato_pige" />
         </div>
       </div>
-      <div class="button">
-        <Knap button_text="BESTIL OG LÆS MERE" variant="blaa" class="button" />
-      </div>
+
       <Blandetis sizeandplace="index" />
 
       <div class="bestsellers">
         <h3>PRØV VORES BESTSELLERS</h3>
         <div class="grid_4">
           <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="" />
+            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
             <h4>PISTACIE</h4>
           </div>
           <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="" />
+            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
             <h4>HASSELNØD</h4>
           </div>
           <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="" />
+            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
             <h4>JORDBÆR SORBET</h4>
           </div>
           <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="" />
+            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
             <h4>CHOKOLADE</h4>
           </div>
         </div>
         <div class="button">
-          <Knap button_text="SE ALLE ISVARIANTER" variant="orange" />
+          <a href=""> <Knap button_text="SE ALLE ISVARIANTER" variant="orange" /></a>
         </div>
       </div>
     </main>
@@ -129,12 +131,14 @@ import Footer from "../components/Footer.astro";
     }
     .labels_forside {
       display: flex;
-      gap: 40px;
       text-align: center;
       justify-content: center;
       align-items: center;
       margin-top: 20px;
-      margin-bottom: 103px;
+      margin-bottom: 85px;
+      margin-left: 24px;
+      margin-right: 24px;
+      gap: 30px;
     }
     h3 {
       width: 350px;
@@ -155,6 +159,7 @@ import Footer from "../components/Footer.astro";
 
     .button {
       margin-bottom: 60px;
+      transform: scale(1);
     }
 
     .findpåkort {
@@ -166,18 +171,24 @@ import Footer from "../components/Footer.astro";
       text-align: center;
       padding-bottom: 30px;
       align-items: center;
-      margin-left: 10px;
+      margin-left: 0;
+      margin-right: 37px;
+      place-items: center;
     }
 
     .lilleis {
-      width: 90px;
+      width: 80px;
+      margin-left: 30px;
+    }
+    .lilleis_tekst {
+      margin-left: 30px;
     }
     .mellemis {
-      width: 110px;
+      width: 100px;
     }
 
     .storis {
-      width: 130px;
+      width: 120px;
     }
 
     .gelatopige {
@@ -209,7 +220,7 @@ import Footer from "../components/Footer.astro";
       height: 290px;
       background-color: #ffffff;
       border-radius: 25px;
-      padding-top: 25px;
+      padding-top: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
@@ -229,26 +240,32 @@ import Footer from "../components/Footer.astro";
       }
       .hjemmelavetis {
         margin-left: 104px;
+        margin-top: 30px;
+        width: 600px;
       }
       .button {
         margin-left: 104px;
+        padding-top: 20px;
       }
       .gelato {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 140px;
+        grid-template-columns: 1.5fr 1fr;
       }
 
-      .gelatopige img {
+      .gelatopige {
         width: 468px;
         height: 512px;
         margin-left: 0;
+        padding-top: 30px;
       }
+
       .grid_4 {
         display: flex;
         text-align: center;
         justify-content: center;
         gap: 100px;
+        margin-left: 104px;
+        margin-right: 104px;
       }
       .p_labels {
         font-size: 1.6rem;
@@ -270,20 +287,34 @@ import Footer from "../components/Footer.astro";
       h3 {
         width: 1200px;
         margin-left: 104px;
+        padding-top: 50px;
       }
       .h3 {
         width: 450px;
         margin-left: 104px;
+        padding-top: 70px;
+      }
+
+      .is_priser_grid {
+        margin-left: 0;
+        margin-right: 104px;
+        place-items: center;
+        padding-top: 40px;
       }
       .lilleis {
-        width: 416px;
+        width: 300px;
+        margin-left: 90px;
       }
+      .lilleis_tekst {
+        margin-left: 90px;
+      }
+
       .mellemis {
-        width: 462px;
+        width: 350px;
       }
 
       .storis {
-        width: 520px;
+        width: 400px;
       }
     }
   </style>

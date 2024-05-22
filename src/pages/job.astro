@@ -1,5 +1,6 @@
 ---
 import "../styles/style.css";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -17,15 +18,7 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <header>
-      <nav>
-        <a href="/">Forside</a>
-        <a href="/isvarianter">Isvarianter</a>
-        <a href="/historien_bag">Historien Bag</a>
-        <a href="/kontakt_os">Kontakt Os</a>
-        <a href="/gelato">Lej Coolbox</a>
-        <a href="/workshop">Workshop</a>
-        <a href="/job">Job</a>
-      </nav>
+      <Header />
     </header>
     <main>
       <h1>SØG JOB HOS OS</h1>
@@ -80,14 +73,16 @@ import Footer from "../components/Footer.astro";
     height: 290px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Skygge omkring boksen */
     overflow: hidden; /* Skjul eventuelt overskydende billede */
-    background: white;
+    background-image: url(/img/spiseris.png);
+    background-size: cover;
     border-radius: 25px;
+    opacity: 0.7;
   }
 
   /* Indholdet i boksen */
   .content {
     position: relative;
-    z-index: 2; /* Sørg for at teksten er foran billedet */
+    z-index: 3; /* Sørg for at teksten er foran billedet */
     padding: 20px;
   }
   li {
@@ -95,6 +90,7 @@ import Footer from "../components/Footer.astro";
     font-size: 0.8rem;
     line-height: 2;
     font-weight: 200;
+    color: white;
   }
   .punktliste {
     list-style-type: disc; /* Typen af punktopstilling: disc, circle, square, none */
@@ -105,6 +101,7 @@ import Footer from "../components/Footer.astro";
   }
   h4 {
     text-align: center;
+    color: white;
   }
   .tyk_tekst {
     font-weight: 500;
@@ -131,7 +128,6 @@ import Footer from "../components/Footer.astro";
 
     p {
       margin-top: 80px;
-      line-height: 35px;
       margin-left: 104px;
     }
 

@@ -2,6 +2,8 @@
 import "../styles/style.css";
 import Knap from "../components/Knap.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Blandetis from "../components/Blandetis.astro";
 ---
 
 <html lang="en">
@@ -17,7 +19,7 @@ import Footer from "../components/Footer.astro";
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
+    <header><Header /></header>
     <main>
       <div class="image_container">
         <div class="billeder">
@@ -29,7 +31,10 @@ import Footer from "../components/Footer.astro";
       <div class="grid_1_1">
         <div>
           <div>
-            <p>Vi vil meget gerne høre fra dig! <br /><br /> Uanset om du hat spørgsmål til vores produkter, brug for hjælp eller ønsker at give feedback, er du altid velkommen til at kontakte os. <br /><br /> Du kan kontakte os via formularen her på siden eller du kan fange os på mail@sicilianskis.dk eller +45 30 22 30 89. <br /><br /> Vi bestræber os efter at vende tilbage indenfor 2 hverdage.</p>
+            <p>
+              Vi vil meget gerne høre fra dig! <br /><br /> Uanset om du hat spørgsmål til vores produkter, brug for hjælp eller ønsker at give feedback, er du altid velkommen til at kontakte os. <br /><br /> Du kan kontakte os via formularen her på siden eller du kan fange os på mail@sicilianskis.dk eller +45 30 22 30 89. <br /><br /> Vi bestræber
+              os efter at vende tilbage indenfor 2 hverdage.
+            </p>
           </div>
         </div>
 
@@ -49,8 +54,7 @@ import Footer from "../components/Footer.astro";
           </form>
         </div>
       </div>
-
-      <img src="/img/blandetis.svg" alt="Blandet is" class="is" />
+      <Blandetis class="is" sizeandplace="kontakt_os" />
       <footer>
         <Footer />
       </footer>
@@ -91,7 +95,6 @@ import Footer from "../components/Footer.astro";
 
         p {
           padding: 5% 7%;
-          line-height: 2;
           font-weight: 200;
         }
 
@@ -130,11 +133,15 @@ import Footer from "../components/Footer.astro";
           margin-left: 280px;
         }
 
+        .grid_1_1 {
+          margin-bottom: 128px;
+        }
+
         @media (min-width: 600px) {
           .grid_1_1 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            margin: 100px 104px 0 104px;
+            margin: 100px 104px 194px 104px;
           }
 
           .overlay_text {

@@ -2,7 +2,7 @@
 import Is from "../components/Is.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-
+import Singleis from "../components/Singleis.astro";
 import "../styles/style.css";
 
 const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
@@ -53,6 +53,7 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       </section>
       <Footer />
     </main>
+    <footer><Footer /></footer>
   </body>
   <style>
     * {
