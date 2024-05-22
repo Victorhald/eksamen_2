@@ -17,6 +17,7 @@ h1 {
   font-family: "Luckiest Guy";
   color: white;
   letter-spacing: 0.5px;
+  text-shadow: -4px -4px 0 #ea9942, 4px -4px 0 #ea9942, -4px 4px 0 #ea9942, 4px 4px 0 #ea9942, 4px 0 0 #ea9942, -4px 0 0 #ea9942, 0 4px 0 #ea9942, 0 -4px 0 #ea9942;
 }
 
 h2 {
