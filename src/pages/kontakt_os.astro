@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import Knap from "../components/Knap.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -18,36 +19,74 @@ import Knap from "../components/Knap.astro";
   <body>
     <header></header>
     <main>
-      <h1>Kontakt os</h1>
+      <div class="image_container">
+        <div class="billeder">
+          <img src="img/citroner.svg" alt="Citroner" />
+        </div>
+        <div class="overlay_text"><h1>Kontakt os</h1></div>
+      </div>
 
-      <div>
+      <div class="grid_1_1">
         <div>
-          <p>Vi vil meget gerne høre fra dig! <br /><br /> Uanset om du hat spørgsmål til vores produkter, brug for hjælp eller ønsker at give feedback, er du altid velkommen til at kontakte os. <br /><br /> Du kan kontakte os via formularen her på siden eller du kan fange os på mail@sicilianskis.dk eller +45 30 22 30 89. <br /><br /> Vi bestræber os efter at vende tilbage indenfor 2 hverdage.</p>
+          <div>
+            <p>Vi vil meget gerne høre fra dig! <br /><br /> Uanset om du hat spørgsmål til vores produkter, brug for hjælp eller ønsker at give feedback, er du altid velkommen til at kontakte os. <br /><br /> Du kan kontakte os via formularen her på siden eller du kan fange os på mail@sicilianskis.dk eller +45 30 22 30 89. <br /><br /> Vi bestræber os efter at vende tilbage indenfor 2 hverdage.</p>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <form>
+            <label for="name">Navn</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Besked</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="button">
+              <Knap button_text="SEND" variant="orange" class="button" />
+            </div>
+          </form>
         </div>
       </div>
 
-      <div class="form-container">
-        <form>
-          <label for="name">Navn</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Besked</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          <div class="button">
-            <Knap button_text="SEND" variant="orange" class="button" />
-          </div>
-          <footer></footer>
-        </form>
-      </div>
-
+      <img src="/img/blandetis.svg" alt="Blandet is" class="is" />
+      <footer>
+        <Footer />
+      </footer>
       <style>
+        .image_container {
+          position: relative;
+          text-align: center;
+          color: white;
+          width: 100%;
+          height: 100%;
+          height: calc(60vh - 300px);
+        }
+        .image_container img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          height: calc(60vh - 300px);
+        }
+
+        .overlay_text {
+          position: absolute;
+          top: 50%;
+          left: 29%;
+          transform: translate(-50%, -50%);
+          font-family: luckiest guy;
+          font-size: 2.5rem;
+          white-space: nowrap;
+        }
         h1 {
-          background-image: url(/img/citroner.svg);
           padding: 20% 10%;
           stroke: orange;
+        }
+
+        label {
+          font-family: "Margarine";
+          text-transform: uppercase;
         }
 
         p {
@@ -61,7 +100,7 @@ import Knap from "../components/Knap.astro";
         }
 
         .form-container {
-          padding: 20px 7%;
+          padding: 20px 7% 0 7%;
           border-radius: 10px;
         }
 
@@ -86,15 +125,43 @@ import Knap from "../components/Knap.astro";
           width: 20%;
           margin-top: 20px;
         }
-
-        .form-container button:hover {
-          background-color: #ecac6796;
+        .is {
+          width: 30%;
+          margin-left: 280px;
         }
 
-        label,
-        button {
-          font-family: "Margarine";
-          margin-bottom: 20epx;
+        @media (min-width: 600px) {
+          .grid_1_1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 100px 104px 0 104px;
+          }
+
+          .overlay_text {
+            position: absolute;
+            top: 50%;
+            left: 370px;
+            transform: translate(-50%, -50%);
+          }
+
+          .image_container {
+            height: calc(80vh - 300px);
+          }
+          .image_container img {
+            height: calc(80vh - 300px);
+          }
+
+          .is {
+            width: 15%;
+            margin-left: 780px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .is {
+            width: 12%;
+            margin-left: 1160px;
+          }
         }
       </style>
     </main>
