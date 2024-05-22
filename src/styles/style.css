@@ -46,7 +46,7 @@ h4 {
 p {
   font-family: system-ui, sans-serif;
   font-size: 0.8rem;
-  line-height: 40px;
+  line-height: 20px;
   font-weight: 200;
 }
 
@@ -70,6 +70,6 @@ p {
 
   p {
     font-size: 1.1rem;
-    line-height: 20px;
+    line-height: 40px;
   }
 }
