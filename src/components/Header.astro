@@ -15,6 +15,11 @@
       <li><a href="/kontakt_os">Kontakt os</a></li>
     </ul>
   </nav>
+  <div class="burger-menu" id="burgerMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
 <style>
@@ -23,25 +28,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url(/img/headerbillede.png);
-    background-size: cover;
-    padding: 90px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
+
   .logo {
     height: 50px;
+    margin-left: 50px;
   }
+
   .menu {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
   }
+
   .menu-container {
     margin-left: auto; /* Skubber menuen længst til højre */
   }
+
   .menu li {
     margin-left: 20px;
   }
+
   .menu a {
     text-decoration: none;
     color: #ea9942;
@@ -50,4 +60,53 @@
     font-family: system-ui, sans-serif;
     padding: 30px;
   }
+
+  /* Burger Menu Styles */
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .burger-menu span {
+    width: 25px;
+    height: 2px;
+    background: #ea9942;
+    margin: 4px 0;
+  }
+
+  /* Media Query for mindre skærme */
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 90px;
+      right: 0;
+      background: white;
+      width: 100%;
+      text-align: center;
+    }
+
+    .menu li {
+      margin: 10px 0;
+    }
+
+    .burger-menu {
+      display: flex;
+    }
+    header {
+      padding: 30px;
+    }
+  }
+
+  .menu.active {
+    display: flex;
+  }
 </style>
+<script>
+  document.getElementById("burgerMenu").addEventListener("click", function () {
+    var menu = document.querySelector(".menu");
+    menu.classList.toggle("active");
+  });
+</script>
