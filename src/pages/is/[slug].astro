@@ -2,6 +2,7 @@
 import Is from "../../components/Is.astro";
 import Singleis from "../../components/Singleis.astro";
 import Footer from "../../components/Footer.astro";
+import "../../styles/style.css";
 
 export async function getStaticPaths() {
   const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
@@ -56,7 +57,6 @@ console.log(myData);
           <img class="produkt_img" src={"/public/img/varianter/" + myData.image} alt="is" />
         </div>
       </Singleis>
-      <Footer />
     </main>
   </body>
   <style>
