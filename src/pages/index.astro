@@ -38,7 +38,7 @@ import Footer from "../components/Footer.astro";
           <p class="p_labels aabninstider">Åbningstider</p>
           <p class="p_labels">Alle dage kl. 12 - 21</p>
           <br />
-          <Knap button_text="FIND PÅ KORT" variant="orange" />
+          <a href=""><Knap button_text="FIND PÅ KORT" variant="orange" /></a>
         </div>
         <div class="vesterbro">
           <h2>VESTERBRO</h2>
@@ -48,16 +48,16 @@ import Footer from "../components/Footer.astro";
           <p class="p_labels aabninstider">Åbningstider</p>
           <p class="p_labels">Alle dage kl. 12 - 21</p>
           <br />
-          <Knap button_text="FIND PÅ KORT" variant="orange" />
+          <a href=""><Knap button_text="FIND PÅ KORT" variant="orange" /></a>
         </div>
       </div>
       <Gulis sizeandplace="index" />
       <div class="is_priser">
         <h3>DU FÅR TRE SMAGE ØKOLOGISK SICILIANSK IS UANSET STØRRELSE!</h3>
         <div class="is_priser_grid">
-          <img class="lilleis" src="/public/img/lilleis.svg" alt="lilleis" />
-          <img class="mellemis" src="/public/img/mellemis.svg" alt="mellemis" />
-          <img class="storis" src="/public/img/storis.svg" alt="storis" />
+          <img class="lilleis" src="" alt="lilleis" />
+          <img class="mellemis" src="" alt="mellemis" />
+          <img class="storis" src="" alt="storis" />
           <p>Lille is</p>
           <p>Mellem is</p>
           <p>Stor is</p>
@@ -73,7 +73,7 @@ import Footer from "../components/Footer.astro";
         </div>
       </div>
       <div class="button">
-        <Knap button_text="BESTIL OG LÆS MERE" variant="blaa" class="button" />
+        <a href=""><Knap button_text="BESTIL OG LÆS MERE" variant="blaa" class="button" /></a>
       </div>
       <Blandetis sizeandplace="index" />
 
@@ -98,7 +98,7 @@ import Footer from "../components/Footer.astro";
           </div>
         </div>
         <div class="button">
-          <Knap button_text="SE ALLE ISVARIANTER" variant="orange" />
+          <a href=""> <Knap button_text="SE ALLE ISVARIANTER" variant="orange" /></a>
         </div>
       </div>
     </main>
@@ -134,7 +134,7 @@ import Footer from "../components/Footer.astro";
       justify-content: center;
       align-items: center;
       margin-top: 20px;
-      margin-bottom: 103px;
+      margin-bottom: 0;
     }
     h3 {
       width: 350px;
@@ -155,6 +155,7 @@ import Footer from "../components/Footer.astro";
 
     .button {
       margin-bottom: 60px;
+      transform: scale(1);
     }
 
     .findpåkort {
@@ -209,7 +210,7 @@ import Footer from "../components/Footer.astro";
       height: 290px;
       background-color: #ffffff;
       border-radius: 25px;
-      padding-top: 25px;
+      padding-top: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 

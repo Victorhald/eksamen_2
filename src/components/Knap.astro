@@ -24,6 +24,7 @@ const { variant } = Astro.props;
     font-size: 0.75rem;
     font-family: "Margarine";
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
   }
   .blaa {
     background-color: #12375b;
@@ -41,12 +42,17 @@ const { variant } = Astro.props;
     font-size: 0.75rem;
     font-family: "Margarine";
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
   }
   @media (min-width: 600px) {
     .blaa,
     .orange {
-      height: 60px;
+      height: 55px;
       font-size: 1rem;
+    }
+    .orange:hover,
+    .blaa:hover {
+      transform: scale(1.2);
     }
   }
 </style>
