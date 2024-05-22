@@ -1,6 +1,6 @@
 ---
-import "../styles/style.css";
 import Is from "../components/Is.astro";
+import Footer from "../components/Footer.astro";
 import Singleis from "../components/Singleis.astro";
 
 const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
@@ -36,12 +36,12 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
         </div>
         <div class="overlay_text">ISVARIANTER</div>
         <div class="overlay_text_1">
-          Indeholder Nødder
           <img class="billede_2" src="img/nut.png" alt="nut" />
+          = Indeholder Nødder
         </div>
         <div class="overlay_text_2">
-          Vegansk
           <img class="billede_1" src="img/vegan.png" alt="vegan" />
+          = Vegansk
         </div>
       </div>
 
@@ -52,6 +52,7 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
           })
         }
       </section>
+      <Footer />
     </main>
   </body>
   <style>
@@ -89,12 +90,12 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       height: calc(80vh - 300px);
     }
     .billede_1 {
-      height: 10px !important;
-      width: 10px !important;
+      height: 20px !important;
+      width: 20px !important;
     }
     .billede_2 {
-      height: 10px !important;
-      width: 10px !important;
+      height: 20px !important;
+      width: 20px !important;
     }
 
     .overlay_text {
@@ -134,7 +135,7 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       text-decoration: none;
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: 800px) {
       .varianter {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
