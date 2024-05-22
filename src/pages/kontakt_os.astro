@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import Knap from "../components/Knap.astro";
 import Footer from "../components/Footer.astro";
+import Blandetis from "../components/Blandetis.astro";
 ---
 
 <html lang="en">
@@ -49,8 +50,7 @@ import Footer from "../components/Footer.astro";
           </form>
         </div>
       </div>
-
-      <img src="/img/blandetis.svg" alt="Blandet is" class="is" />
+      <Blandetis class="is" sizeandplace="kontakt_os" />
       <footer>
         <Footer />
       </footer>
@@ -91,7 +91,6 @@ import Footer from "../components/Footer.astro";
 
         p {
           padding: 5% 7%;
-          line-height: 2;
           font-weight: 200;
         }
 
@@ -130,11 +129,15 @@ import Footer from "../components/Footer.astro";
           margin-left: 280px;
         }
 
+        .grid_1_1 {
+          margin-bottom: 128px;
+        }
+
         @media (min-width: 600px) {
           .grid_1_1 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            margin: 100px 104px 0 104px;
+            margin: 100px 104px 194px 104px;
           }
 
           .overlay_text {
