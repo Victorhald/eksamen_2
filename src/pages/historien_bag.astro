@@ -1,5 +1,6 @@
 ---
 import "../styles/style.css";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -47,7 +48,9 @@ import "../styles/style.css";
       <div class="banner_div">
         <img src="/img/banner.png" alt="Banner" class="banner" />
       </div>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </main>
   </body>
 </html>
@@ -85,6 +88,9 @@ import "../styles/style.css";
     padding: 10% 0;
   }
 
+  .footer_banner {
+    display: none;
+  }
   @media (min-width: 600px) {
     .grid_1_1 {
       display: grid;
