@@ -76,12 +76,13 @@ import Footer from "../components/Footer.astro";
     background-image: url(/img/spiseris.png);
     background-size: cover;
     border-radius: 25px;
+    opacity: 0.7;
   }
 
   /* Indholdet i boksen */
   .content {
     position: relative;
-    z-index: 2; /* Sørg for at teksten er foran billedet */
+    z-index: 3; /* Sørg for at teksten er foran billedet */
     padding: 20px;
   }
   li {
@@ -89,7 +90,7 @@ import Footer from "../components/Footer.astro";
     font-size: 0.8rem;
     line-height: 2;
     font-weight: 200;
-    color: #f2f7fa;
+    color: white;
   }
   .punktliste {
     list-style-type: disc; /* Typen af punktopstilling: disc, circle, square, none */
@@ -100,6 +101,7 @@ import Footer from "../components/Footer.astro";
   }
   h4 {
     text-align: center;
+    color: white;
   }
   .tyk_tekst {
     font-weight: 500;
