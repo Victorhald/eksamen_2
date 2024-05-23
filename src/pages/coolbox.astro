@@ -22,13 +22,7 @@ import Gulis from "../components/Gulis.astro";
     <header><Header /></header>
 
     <main>
-      <div class="image_container">
-        <div class="billeder">
-          <img src="img/citroner.svg" alt="Citroner" />
-        </div>
-        <div class="overlay_text"><h1>Gelato Coolbox</h1></div>
-      </div>
-
+      <h1>GELATO COOLBOX</h1>
       <div class="grid_overst">
         <div>
           <div class="afsnit">
@@ -222,35 +216,11 @@ import Gulis from "../components/Gulis.astro";
     img {
       max-width: 100%;
     }
-    .image_container {
-      position: relative;
-      text-align: center;
-      color: white;
-      width: 100%;
-      height: 100%;
-      height: calc(60vh - 300px);
-      z-index: -1;
-    }
-    .image_container img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      height: calc(60vh - 300px);
-    }
-
-    .overlay_text {
-      position: absolute;
-      top: 50%;
-      left: 38%;
-      transform: translate(-50%, -50%);
-      font-family: luckiest guy;
-      font-size: 2.5rem;
-      white-space: nowrap;
-    }
 
     h1 {
-      padding: 20% 10%;
-      stroke: orange;
+      padding-left: 24px;
+      background-image: url(/img/spiseris.png);
+      background-size: cover;
     }
 
     .afsnit {
@@ -422,19 +392,8 @@ import Gulis from "../components/Gulis.astro";
         grid-template-columns: 1fr 1fr;
         gap: 30px;
       }
-
-      .overlay_text {
-        position: absolute;
-        top: 65%;
-        left: 342px;
-        transform: translate(-50%, -50%);
-      }
-
-      .image_container {
-        height: calc(110vh - 300px);
-      }
-      .image_container img {
-        height: calc(110vh - 300px);
+      h1 {
+        padding-left: 50px;
       }
     }
 
@@ -456,7 +415,7 @@ import Gulis from "../components/Gulis.astro";
       h1,
       .variant_afsnit h2,
       .afsnit_2 {
-        margin-left: 104px;
+        padding-left: 104px;
       }
 
       h2,
