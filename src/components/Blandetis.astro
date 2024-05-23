@@ -26,13 +26,24 @@ const { sizeandplace } = Astro.props;
   }
 
   .kontakt_os {
-    position: absolute;
+    position: unset;
     width: 122px;
+<<<<<<< HEAD
     bottom: 0px;
+=======
+    margin-left: 254px;
+    top: 840px;
+>>>>>>> b4da3e52e47ba01b2c586c6f3d3fecd18d18485f
   }
   @media (min-width: 768px) {
     .index {
       width: 170px;
+    }
+
+    .kontakt_os {
+      position: unset;
+      width: 200px;
+      margin-left: 500px;
     }
   }
   @media (min-width: 1024px) {
@@ -41,10 +52,9 @@ const { sizeandplace } = Astro.props;
     }
 
     .kontakt_os {
-      position: absolute;
+      position: unset;
       width: 200px;
-      left: 1119px;
-      top: 833px;
+      margin-left: 1119px;
     }
   }
 </style>

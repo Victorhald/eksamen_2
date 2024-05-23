@@ -11,7 +11,7 @@ const { data } = Astro.props;
       <img class="is_img" src={"/img/varianter/" + data.image} alt="is" />
       <div class="allergy_img_container">
         <h4>{data.name}</h4>
-        <img class="allergy" src={data.allergyy} alt="is" />
+        {data.allergyy && <img class="allergy" src={data.allergyy} alt="is" />}
       </div>
     </div>
   </article>
