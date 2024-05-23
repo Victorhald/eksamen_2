@@ -60,6 +60,7 @@ import Blandetis from "../components/Blandetis.astro";
           width: 100%;
           height: 100%;
           height: calc(60vh - 300px);
+          z-index: -1;
         }
         .image_container img {
           object-fit: cover;
@@ -137,6 +138,20 @@ import Blandetis from "../components/Blandetis.astro";
             display: grid;
             grid-template-columns: 1fr 1fr;
             margin: 100px 104px -105px 104px;
+          }
+
+          .overlay_text {
+            position: absolute;
+            top: 50%;
+            left: 370px;
+            transform: translate(-50%, -50%);
+          }
+
+          .image_container {
+            height: calc(80vh - 300px);
+          }
+          .image_container img {
+            height: calc(80vh - 300px);
           }
 
           .is {

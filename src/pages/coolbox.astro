@@ -2,6 +2,8 @@
 import "../styles/style.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import Knap from "../components/Knap.astro";
+import Gulis from "../components/Gulis.astro";
 ---
 
 <html lang="en">
@@ -27,89 +29,158 @@ import Header from "../components/Header.astro";
         <div class="overlay_text"><h1>Gelato Coolbox</h1></div>
       </div>
 
+      <div class="grid_overst">
+        <div>
+          <div class="afsnit">
+            <h2>Hjemmelavet is til din fest</h2>
+            <p>Vil du have lækker, frisklavet Siciliansk is til brylluppet, fødselsdagen eller firmarrangementet? Lej en Gelato Cool Box og spis alt det is du har lyst til! Du skal bare vælge smage, og så klarer vi resten.</p>
+            <p class="pris">Pris: 2000 kr.</p>
+          </div>
+
+          <div class="afsnit">
+            <h2>Hvad er inkluderet?</h2>
+            <p>Boksen behøver ikke strøm, og kan holde sig kold i op til 12 timer. Boksen kommer med 12 liter is, fordelt på 2 varianter, som I selv vælger. Der er is til ca. 40-100 personer (2x6L) pr. boks.</p>
+            <p class="skeer">Inkl. bægre og skeer.</p>
+          </div>
+        </div>
+
+        <div>
+          <img src="/img/gelato_pige.svg" alt="Cool Box" class="img_pige" />
+        </div>
+      </div>
+
       <div>
-        <div>
-          <h2>Hjemmelavet is til din fest</h2>
-          <p>Vil du have lækker, frisklavet Siciliansk is til brylluppet, fødselsdagen eller firmarrangementet? Lej en Gelato Cool Box og spis alt det is du har lyst til! Du skal bare vælge smage, og så klarer vi resten.</p>
-          <p class="pris">Pris: 2000 kr.</p>
-        </div>
-
-        <div>
-          <h2>Hvad er inkluderet?</h2>
-          <p>Boksen behøver ikke strøm, og kan holde sig kold i op til 12 timer. Boksen kommer med 12 liter is, fordelt på 2 varianter, som I selv vælger. Der er is til ca. 40-100 personer (2x6L) pr. boks.</p>
-          <p class="skeer">Inkl. bægre og skeer.</p>
-        </div>
-
-        <div>
-          <img src="/img/gelato_pige.svg" alt="Cool Box" />
-        </div>
-
-        <div>
+        <div class="variant_afsnit">
           <h2>VÆLG 2 VARIANTER TIL DIN BOX</h2>
 
           <form id="variantForm">
-            <div class="variant-container">
-              <div class="variant">
-                <input type="checkbox" id="floor_di_latte" name="variants" value="FLOOR DI LATTE" />
-                <label for="floor_di_latte">FLOOR DI LATTE</label>
+            <div class="variant-container varianter_grid">
+              <div>
+                <div class="variant">
+                  <input type="checkbox" id="floor_di_latte" name="variants" value="FLOOR DI LATTE" />
+                  <label for="floor_di_latte">FLOOR DI LATTE </label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="mandel" name="variants" value="MANDEL" />
+                  <label for="mandel">MANDEL <img src="/img/nut.png" alt="Nut" class="icon" /></label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="hasselnod" name="variants" value="HASSELNØD" />
+                  <label for="hasselnod">HASSELNØD <img src="/img/nut.png" alt="Nut" class="icon" /></label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="pistacie" name="variants" value="PISTACIE" />
+                  <label for="pistacie">PISTACIE <img src="/img/nut.png" alt="Nut" class="icon" /></label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="lakrids" name="variants" value="LAKRIDS" />
+                  <label for="lakrids">LAKRIDS</label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="citron_sorbet" name="variants" value="CITRON SORBET" />
+                  <label for="citron_sorbet">CITRON SORBET <img src="/img/vegan.png" alt="Vegan" class="icon" /></label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="mandarin_sorbet" name="variants" value="MANDARIN SORBET" />
+                  <label for="mandarin_sorbet">MANDARIN SORBET <img src="/img/vegan.png" alt="Vegan" class="icon" /></label>
+                </div>
               </div>
-              <div class="variant">
-                <input type="checkbox" id="mandel" name="variants" value="MANDEL" />
-                <label for="mandel">MANDEL</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="hasselnod" name="variants" value="HASSELNØD" />
-                <label for="hasselnod">HASSELNØD</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="pistacie" name="variants" value="PISTACIE" />
-                <label for="pistacie">PISTACIE</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="lakrids" name="variants" value="LAKRIDS" />
-                <label for="lakrids">LAKRIDS</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="citron_sorbet" name="variants" value="CITRON SORBET" />
-                <label for="citron_sorbet">CITRON SORBET</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="mandarin_sorbet" name="variants" value="MANDARIN SORBET" />
-                <label for="mandarin_sorbet">MANDARIN SORBET</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="chokolade" name="variants" value="CHOKOLADE" />
-                <label for="chokolade">CHOKOLADE</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="kaffe" name="variants" value="KAFFE" />
-                <label for="kaffe">KAFFE</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="stracciatella" name="variants" value="STRACCIATELLA" />
-                <label for="stracciatella">STRACCIATELLA</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="zuppa_inglese" name="variants" value="ZUPPA INGLESE" />
-                <label for="zuppa_inglese">ZUPPA INGLESE</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="jordbaer_sorbet" name="variants" value="JORDBÆR SORBET" />
-                <label for="jordbaer_sorbet">JORDBÆR SORBET</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="blodappelsin_sorbet" name="variants" value="BLODAPPELSIN SORBET" />
-                <label for="blodappelsin_sorbet">BLODAPPELSIN SORBET</label>
-              </div>
-              <div class="variant">
-                <input type="checkbox" id="blaabaer_sorbet" name="variants" value="BLÅBÆR SORBET" />
-                <label for="blaabaer_sorbet">BLÅBÆR SORBET</label>
+
+              <div>
+                <div class="variant">
+                  <input type="checkbox" id="chokolade" name="variants" value="CHOKOLADE" />
+                  <label for="chokolade">CHOKOLADE</label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="kaffe" name="variants" value="KAFFE" />
+                  <label for="kaffe">KAFFE</label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="stracciatella" name="variants" value="STRACCIATELLA" />
+                  <label for="stracciatella">STRACCIATELLA</label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="zuppa_inglese" name="variants" value="ZUPPA INGLESE" />
+                  <label for="zuppa_inglese">ZUPPA INGLESE</label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="jordbaer_sorbet" name="variants" value="JORDBÆR SORBET" />
+                  <label for="jordbaer_sorbet">JORDBÆR SORBET <img src="/img/vegan.png" alt="Vegan" class="icon" /></label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="blodappelsin_sorbet" name="variants" value="BLODAPPELSIN SORBET" />
+                  <label for="blodappelsin_sorbet">BLODAPPELSIN SORBET <img src="/img/vegan.png" alt="Vegan" class="icon" /></label>
+                </div>
+                <div class="variant">
+                  <input type="checkbox" id="blaabaer_sorbet" name="variants" value="BLÅBÆR SORBET" />
+                  <label for="blaabaer_sorbet">BLÅBÆR SORBET <img src="/img/vegan.png" alt="Vegan" class="icon" /></label>
+                </div>
               </div>
             </div>
 
-            <button type="submit">Submit</button>
+            <div class="ikoner">
+              <div class="vegan">
+                <p><img src="/img/vegan.png" alt="Vegan" class="icon" /> = Vegansk</p>
+              </div>
+
+              <div class="nut">
+                <p><img src="/img/nut.png" alt="Nut" class="icon" /> = Indeholder nødder</p>
+              </div>
+            </div>
           </form>
         </div>
+
+        <div class="afsnit_2">
+          <h2>SKRIV DINE OPLYSNINGER NEDENFOR</h2>
+
+          <p class="tekst_2">Vi bestræber os efter at vende tilbage indenfor 2 hverdage.</p>
+        </div>
+
+        <div class="oplysninger_form">
+          <div>
+            <label for="name">Fulde navn:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="tel" name="tel" required />
+          </div>
+
+          <div>
+            <label for="date_time">Vælg dato og tidsrum:</label>
+            <input type="datetime-local" id="date_time" name="date_time" />
+          </div>
+
+          <div>
+            <label for="address">Adresse:</label>
+            <input type="text" id="address" name="address" required />
+          </div>
+
+          <div>
+            <label for="delivery-method">Vælg leveringsmetode:</label>
+            <select id="delivery-method" name="delivery-method" required>
+              <option value="">Vælg en metode</option>
+              <option value="delivery">Levering</option>
+              <option value="pickup">Afhentning</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message">Kommentarer eller spørgsmål?</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <div class="button">
+              <Knap type="submit" button_text="SEND" variant="orange" class="button" />
+            </div>
+          </div>
+        </div>
+
         <script>
           document.querySelectorAll('input[name="variants"]').forEach((checkbox) => {
             checkbox.addEventListener("change", function () {
@@ -138,78 +209,280 @@ import Header from "../components/Header.astro";
         </script>
       </div>
     </main>
+
+    <footer>
+      <Footer />
+    </footer>
   </body>
 
-  <footer>
-    <Footer />
-  </footer>
+  <style>
+    header {
+      z-index: 1000;
+    }
+    img {
+      max-width: 100%;
+    }
+    .image_container {
+      position: relative;
+      text-align: center;
+      color: white;
+      width: 100%;
+      height: 100%;
+      height: calc(60vh - 300px);
+      z-index: -1;
+    }
+    .image_container img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      height: calc(60vh - 300px);
+    }
+
+    .overlay_text {
+      position: absolute;
+      top: 50%;
+      left: 38%;
+      transform: translate(-50%, -50%);
+      font-family: luckiest guy;
+      font-size: 2.5rem;
+      white-space: nowrap;
+    }
+
+    h1 {
+      padding: 20% 10%;
+      stroke: orange;
+    }
+
+    .afsnit {
+      margin: 45px 0;
+    }
+    h2,
+    label {
+      margin-bottom: 9px;
+    }
+    h2,
+    p {
+      margin: 10px 24px;
+    }
+
+    label {
+      font-family: "Margarine";
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .img_pige {
+      display: flex;
+      margin: 40px auto;
+      width: 250px;
+    }
+
+    /* VARIANT FORM */
+    .variant-container,
+    .oplysninger_form {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin: 10px 24px 10px 24px;
+    }
+
+    .variant_afsnit {
+      background-color: #dfebf3;
+      padding-top: 25px;
+    }
+    .variant {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+    }
+    .variant input[type="checkbox"] {
+      display: none;
+    }
+    .variant label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .variant label::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #12375b;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .variant input[type="checkbox"]:checked + label::before {
+      background-color: #e8a965;
+      border-color: #12375b;
+    }
+    .variant input[type="checkbox"]:disabled + label::before {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    .form-container {
+      padding: 20px 7% 0 7%;
+      border-radius: 10px;
+    }
+
+    .oplysninger_form input,
+    .oplysninger_form textarea,
+    .oplysninger_form button,
+    .oplysninger_form option,
+    .oplysninger_form select {
+      display: block;
+      width: 100%;
+      margin-bottom: 35px;
+      padding: 10px;
+      border: 0px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .tekst_2 {
+      margin-bottom: 35px;
+    }
+    .button {
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .icon {
+      margin-left: 10px;
+      width: 16px;
+    }
+
+    .ikoner {
+      display: flex;
+      margin: 10px auto 20px 24px;
+      padding-bottom: 25px;
+    }
+    .ikoner p {
+      width: 160px;
+      margin: 0 10px;
+    }
+
+    .afsnit_2 {
+      margin-top: 50px;
+    }
+
+    footer {
+      margin-top: 50px;
+    }
+
+    @media (min-width: 768px) {
+      .grid_overst {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 20px 0;
+      }
+
+      .grid_overst > div:first-child {
+        order: 2;
+      }
+
+      .grid_overst > div:last-child {
+        order: 1;
+      }
+
+      .img_pige {
+        width: 315px;
+        height: auto;
+      }
+      .varianter_grid {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        margin: 40px 0px;
+        justify-content: center;
+      }
+
+      .ikoner {
+        display: flex;
+        margin: 10px;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .ikoner p {
+        width: unset;
+        margin: 0 10px;
+      }
+
+      .variant-container {
+        margin-bottom: 15px;
+      }
+
+      .oplysninger_form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .overlay_text {
+        position: absolute;
+        top: 65%;
+        left: 342px;
+        transform: translate(-50%, -50%);
+      }
+
+      .image_container {
+        height: calc(110vh - 300px);
+      }
+      .image_container img {
+        height: calc(110vh - 300px);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      h2 {
+        font-size: 1.9rem;
+      }
+
+      label {
+        font-size: 1.3rem;
+      }
+
+      .variant label {
+        font-weight: 100;
+      }
+
+      .variant-container,
+      .oplysninger_form,
+      h1,
+      .variant_afsnit h2,
+      .afsnit_2 {
+        margin-left: 104px;
+      }
+
+      h2,
+      p {
+        margin-left: 0;
+      }
+
+      .oplysninger_form input,
+      .oplysninger_form textarea,
+      .oplysninger_form button,
+      .oplysninger_form option,
+      .oplysninger_form select {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+        padding: 20px;
+        border: 0px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+      }
+
+      .button {
+        margin-top: 20px;
+      }
+    }
+  </style>
 </html>
-
-<style>
-  .image_container {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 100%;
-    height: 100%;
-    height: calc(60vh - 300px);
-  }
-  .image_container img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    height: calc(60vh - 300px);
-  }
-
-  .overlay_text {
-    position: absolute;
-    top: 50%;
-    left: 38%;
-    transform: translate(-50%, -50%);
-    font-family: luckiest guy;
-    font-size: 2.5rem;
-    white-space: nowrap;
-  }
-
-  h1 {
-    padding: 20% 10%;
-    stroke: orange;
-  }
-
-  /* VARIANT FORM */
-  .variant-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .variant {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-  .variant input[type="checkbox"] {
-    display: none;
-  }
-  .variant label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  .variant label::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  .variant input[type="checkbox"]:checked + label::before {
-    background-color: #b3d9ff;
-    border-color: #66b3ff;
-  }
-  .variant input[type="checkbox"]:disabled + label::before {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
-</style>
