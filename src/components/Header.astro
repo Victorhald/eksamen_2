@@ -14,22 +14,27 @@
       <li><a href="/workshop">Workshops</a></li>
       <li><a href="/kontakt_os">Kontakt os</a></li>
     </ul>
+    <div class="burger-menu" id="burgerMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
-  <div class="burger-menu" id="burgerMenu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
 </header>
 
 <style>
   /*menu*/
   header {
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 70px;
     padding-bottom: 70px;
+    background-image: url(/img/headerbillede.png);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .logo {
