@@ -2,6 +2,8 @@
 import "../styles/style.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import Knap from "../components/Knap.astro";
+import Gulis from "../components/Gulis.astro";
 ---
 
 <html lang="en">
@@ -28,20 +30,20 @@ import Header from "../components/Header.astro";
       </div>
 
       <div>
-        <div>
+        <div class="afsnit">
           <h2>Hjemmelavet is til din fest</h2>
           <p>Vil du have lækker, frisklavet Siciliansk is til brylluppet, fødselsdagen eller firmarrangementet? Lej en Gelato Cool Box og spis alt det is du har lyst til! Du skal bare vælge smage, og så klarer vi resten.</p>
           <p class="pris">Pris: 2000 kr.</p>
         </div>
 
-        <div>
+        <div class="afsnit">
           <h2>Hvad er inkluderet?</h2>
           <p>Boksen behøver ikke strøm, og kan holde sig kold i op til 12 timer. Boksen kommer med 12 liter is, fordelt på 2 varianter, som I selv vælger. Der er is til ca. 40-100 personer (2x6L) pr. boks.</p>
           <p class="skeer">Inkl. bægre og skeer.</p>
         </div>
 
         <div>
-          <img src="/img/gelato_pige.svg" alt="Cool Box" />
+          <img src="/img/gelato_pige.svg" alt="Cool Box" class="img_pige" />
         </div>
 
         <div>
@@ -51,19 +53,19 @@ import Header from "../components/Header.astro";
             <div class="variant-container">
               <div class="variant">
                 <input type="checkbox" id="floor_di_latte" name="variants" value="FLOOR DI LATTE" />
-                <label for="floor_di_latte">FLOOR DI LATTE</label>
+                <label for="floor_di_latte">FLOOR DI LATTE </label>
               </div>
               <div class="variant">
                 <input type="checkbox" id="mandel" name="variants" value="MANDEL" />
-                <label for="mandel">MANDEL</label>
+                <label for="mandel">MANDEL <img src="/img/nut.png" alt="Nut" class="icon" /></label>
               </div>
               <div class="variant">
                 <input type="checkbox" id="hasselnod" name="variants" value="HASSELNØD" />
-                <label for="hasselnod">HASSELNØD</label>
+                <label for="hasselnod">HASSELNØD <img src="/img/nut.png" alt="Nut" class="icon" /></label>
               </div>
               <div class="variant">
                 <input type="checkbox" id="pistacie" name="variants" value="PISTACIE" />
-                <label for="pistacie">PISTACIE</label>
+                <label for="pistacie">PISTACIE <img src="/img/nut.png" alt="Nut" class="icon" /></label>
               </div>
               <div class="variant">
                 <input type="checkbox" id="lakrids" name="variants" value="LAKRIDS" />
@@ -71,11 +73,11 @@ import Header from "../components/Header.astro";
               </div>
               <div class="variant">
                 <input type="checkbox" id="citron_sorbet" name="variants" value="CITRON SORBET" />
-                <label for="citron_sorbet">CITRON SORBET</label>
+                <label for="citron_sorbet">CITRON SORBET <img src="/img/vegan.png" alt="Vegan" class="icon" /></label>
               </div>
               <div class="variant">
                 <input type="checkbox" id="mandarin_sorbet" name="variants" value="MANDARIN SORBET" />
-                <label for="mandarin_sorbet">MANDARIN SORBET</label>
+                <label for="mandarin_sorbet">MANDARIN SORBET <img src="/img/vegan.png" alt="Vegan" class="icon" /></label>
               </div>
               <div class="variant">
                 <input type="checkbox" id="chokolade" name="variants" value="CHOKOLADE" />
@@ -95,121 +97,210 @@ import Header from "../components/Header.astro";
               </div>
               <div class="variant">
                 <input type="checkbox" id="jordbaer_sorbet" name="variants" value="JORDBÆR SORBET" />
-                <label for="jordbaer_sorbet">JORDBÆR SORBET</label>
+                <label for="jordbaer_sorbet">JORDBÆR SORBET <img src="/img/vegan.png" alt="Vegan" class="icon" /></label>
               </div>
               <div class="variant">
                 <input type="checkbox" id="blodappelsin_sorbet" name="variants" value="BLODAPPELSIN SORBET" />
-                <label for="blodappelsin_sorbet">BLODAPPELSIN SORBET</label>
+                <label for="blodappelsin_sorbet">BLODAPPELSIN SORBET <img src="/img/vegan.png" alt="Vegan" class="icon" /></label>
               </div>
               <div class="variant">
                 <input type="checkbox" id="blaabaer_sorbet" name="variants" value="BLÅBÆR SORBET" />
-                <label for="blaabaer_sorbet">BLÅBÆR SORBET</label>
+                <label for="blaabaer_sorbet">BLÅBÆR SORBET <img src="/img/vegan.png" alt="Vegan" class="icon" /></label>
               </div>
             </div>
 
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-        <script>
-          document.querySelectorAll('input[name="variants"]').forEach((checkbox) => {
-            checkbox.addEventListener("change", function () {
-              var selectedOptions = Array.from(document.querySelectorAll('input[name="variants"]:checked')).length;
-              document.querySelectorAll('input[name="variants"]').forEach((box) => {
-                if (selectedOptions >= 2 && !box.checked) {
-                  box.disabled = true;
+            <h2>SKRIV OPLYSNINGER NEDENFOR</h2>
+
+            <p>Vi bestræber os efter at vende tilbage indenfor 2 hverdage.</p>
+
+            <div class="oplysninger_form">
+              <label for="name">Fulde navn:</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="phone">Telefonnummer:</label>
+              <input type="tel" id="tel" name="tel" required />
+
+              <label for="date_time">Vælg dato og tidsrum:</label>
+              <input type="datetime-local" id="date_time" name="date_time" />
+
+              <label for="address">Adresse:</label>
+              <input type="text" id="address" name="address" required />
+
+              <label for="delivery-method">Vælg leveringsmetode:</label>
+              <select id="delivery-method" name="delivery-method" required>
+                <option value="">Vælg en metode</option>
+                <option value="delivery">Levering</option>
+                <option value="pickup">Afhentning</option>
+              </select>
+
+              <label for="message">Kommentarer eller spørgsmål?</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+
+              <div class="button">
+                <Knap type="submit" button_text="SEND" variant="orange" class="button" />
+              </div>
+            </div>
+
+            <Gulis class="is" sizeandplace="coolbox" />
+            <script>
+              document.querySelectorAll('input[name="variants"]').forEach((checkbox) => {
+                checkbox.addEventListener("change", function () {
+                  var selectedOptions = Array.from(document.querySelectorAll('input[name="variants"]:checked')).length;
+                  document.querySelectorAll('input[name="variants"]').forEach((box) => {
+                    if (selectedOptions >= 2 && !box.checked) {
+                      box.disabled = true;
+                    } else {
+                      box.disabled = false;
+                    }
+                  });
+                });
+              });
+
+              document.getElementById("variantForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                var selectedOptions = Array.from(document.querySelectorAll('input[name="variants"]:checked')).map((option) => option.value);
+
+                if (selectedOptions.length !== 2) {
+                  alert("Du skal vælge præcis to varianter.");
                 } else {
-                  box.disabled = false;
+                  alert("Du har valgt " + selectedOptions.join(" og ") + ".");
                 }
               });
-            });
-          });
-
-          document.getElementById("variantForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            var selectedOptions = Array.from(document.querySelectorAll('input[name="variants"]:checked')).map((option) => option.value);
-
-            if (selectedOptions.length !== 2) {
-              alert("Du skal vælge præcis to varianter.");
-            } else {
-              alert("Du har valgt " + selectedOptions.join(" og ") + ".");
-            }
-          });
-        </script>
+            </script>
+          </form>
+        </div>
       </div>
+
+      <footer>
+        <Footer />
+      </footer>
     </main>
+
+    <style>
+      img {
+        max-width: 100%;
+      }
+      .image_container {
+        position: relative;
+        text-align: center;
+        color: white;
+        width: 100%;
+        height: 100%;
+        height: calc(60vh - 300px);
+      }
+      .image_container img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        height: calc(60vh - 300px);
+      }
+
+      .overlay_text {
+        position: absolute;
+        top: 50%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+        font-family: luckiest guy;
+        font-size: 2.5rem;
+        white-space: nowrap;
+      }
+
+      h1 {
+        padding: 20% 10%;
+        stroke: orange;
+      }
+
+      .afsnit {
+        margin: 25px 0;
+      }
+      h2,
+      label {
+        margin-bottom: 9px;
+      }
+
+      h2,
+      p {
+        margin: 10px 24px;
+      }
+
+      label {
+        font-family: "Margarine";
+        text-transform: uppercase;
+      }
+
+      .img_pige {
+        display: flex;
+        margin: 40px auto;
+        width: 250px;
+      }
+
+      /* VARIANT FORM */
+      .variant-container,
+      .oplysninger_form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 10px 24px 60px 24px;
+      }
+      .variant {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+      }
+      .variant input[type="checkbox"] {
+        display: none;
+      }
+      .variant label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .variant label::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #12375b;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .variant input[type="checkbox"]:checked + label::before {
+        background-color: #e8a965;
+        border-color: #12375b;
+      }
+      .variant input[type="checkbox"]:disabled + label::before {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      .form-container {
+        padding: 20px 7% 0 7%;
+        border-radius: 10px;
+      }
+
+      .oplysninger_form input,
+      .oplysninger_form textarea,
+      .oplysninger_form button,
+      .oplysninger_form option,
+      .oplysninger_form select {
+        display: block;
+        width: 100%;
+        margin-bottom: 35px;
+        padding: 10px;
+        border: 0px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .button {
+        display: flex;
+        margin: 0 auto;
+      }
+    </style>
   </body>
-
-  <footer>
-    <Footer />
-  </footer>
 </html>
-
-<style>
-  .image_container {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 100%;
-    height: 100%;
-    height: calc(60vh - 300px);
-  }
-  .image_container img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    height: calc(60vh - 300px);
-  }
-
-  .overlay_text {
-    position: absolute;
-    top: 50%;
-    left: 38%;
-    transform: translate(-50%, -50%);
-    font-family: luckiest guy;
-    font-size: 2.5rem;
-    white-space: nowrap;
-  }
-
-  h1 {
-    padding: 20% 10%;
-    stroke: orange;
-  }
-
-  /* VARIANT FORM */
-  .variant-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .variant {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-  .variant input[type="checkbox"] {
-    display: none;
-  }
-  .variant label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  .variant label::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  .variant input[type="checkbox"]:checked + label::before {
-    background-color: #b3d9ff;
-    border-color: #66b3ff;
-  }
-  .variant input[type="checkbox"]:disabled + label::before {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
-</style>
