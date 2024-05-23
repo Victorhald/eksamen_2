@@ -1,0 +1,215 @@
+---
+import "../styles/style.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Gelato Coolbox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Margarine&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><Header /></header>
+
+    <main>
+      <div class="image_container">
+        <div class="billeder">
+          <img src="img/citroner.svg" alt="Citroner" />
+        </div>
+        <div class="overlay_text"><h1>Gelato Coolbox</h1></div>
+      </div>
+
+      <div>
+        <div>
+          <h2>Hjemmelavet is til din fest</h2>
+          <p>Vil du have lækker, frisklavet Siciliansk is til brylluppet, fødselsdagen eller firmarrangementet? Lej en Gelato Cool Box og spis alt det is du har lyst til! Du skal bare vælge smage, og så klarer vi resten.</p>
+          <p class="pris">Pris: 2000 kr.</p>
+        </div>
+
+        <div>
+          <h2>Hvad er inkluderet?</h2>
+          <p>Boksen behøver ikke strøm, og kan holde sig kold i op til 12 timer. Boksen kommer med 12 liter is, fordelt på 2 varianter, som I selv vælger. Der er is til ca. 40-100 personer (2x6L) pr. boks.</p>
+          <p class="skeer">Inkl. bægre og skeer.</p>
+        </div>
+
+        <div>
+          <img src="/img/gelato_pige.svg" alt="Cool Box" />
+        </div>
+
+        <div>
+          <h2>VÆLG 2 VARIANTER TIL DIN BOX</h2>
+
+          <form id="variantForm">
+            <div class="variant-container">
+              <div class="variant">
+                <input type="checkbox" id="floor_di_latte" name="variants" value="FLOOR DI LATTE" />
+                <label for="floor_di_latte">FLOOR DI LATTE</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="mandel" name="variants" value="MANDEL" />
+                <label for="mandel">MANDEL</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="hasselnod" name="variants" value="HASSELNØD" />
+                <label for="hasselnod">HASSELNØD</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="pistacie" name="variants" value="PISTACIE" />
+                <label for="pistacie">PISTACIE</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="lakrids" name="variants" value="LAKRIDS" />
+                <label for="lakrids">LAKRIDS</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="citron_sorbet" name="variants" value="CITRON SORBET" />
+                <label for="citron_sorbet">CITRON SORBET</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="mandarin_sorbet" name="variants" value="MANDARIN SORBET" />
+                <label for="mandarin_sorbet">MANDARIN SORBET</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="chokolade" name="variants" value="CHOKOLADE" />
+                <label for="chokolade">CHOKOLADE</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="kaffe" name="variants" value="KAFFE" />
+                <label for="kaffe">KAFFE</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="stracciatella" name="variants" value="STRACCIATELLA" />
+                <label for="stracciatella">STRACCIATELLA</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="zuppa_inglese" name="variants" value="ZUPPA INGLESE" />
+                <label for="zuppa_inglese">ZUPPA INGLESE</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="jordbaer_sorbet" name="variants" value="JORDBÆR SORBET" />
+                <label for="jordbaer_sorbet">JORDBÆR SORBET</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="blodappelsin_sorbet" name="variants" value="BLODAPPELSIN SORBET" />
+                <label for="blodappelsin_sorbet">BLODAPPELSIN SORBET</label>
+              </div>
+              <div class="variant">
+                <input type="checkbox" id="blaabaer_sorbet" name="variants" value="BLÅBÆR SORBET" />
+                <label for="blaabaer_sorbet">BLÅBÆR SORBET</label>
+              </div>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <script>
+          document.querySelectorAll('input[name="variants"]').forEach((checkbox) => {
+            checkbox.addEventListener("change", function () {
+              var selectedOptions = Array.from(document.querySelectorAll('input[name="variants"]:checked')).length;
+              document.querySelectorAll('input[name="variants"]').forEach((box) => {
+                if (selectedOptions >= 2 && !box.checked) {
+                  box.disabled = true;
+                } else {
+                  box.disabled = false;
+                }
+              });
+            });
+          });
+
+          document.getElementById("variantForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var selectedOptions = Array.from(document.querySelectorAll('input[name="variants"]:checked')).map((option) => option.value);
+
+            if (selectedOptions.length !== 2) {
+              alert("Du skal vælge præcis to varianter.");
+            } else {
+              alert("Du har valgt " + selectedOptions.join(" og ") + ".");
+            }
+          });
+        </script>
+      </div>
+    </main>
+  </body>
+
+  <footer>
+    <Footer />
+  </footer>
+</html>
+
+<style>
+  .image_container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    height: calc(60vh - 300px);
+  }
+  .image_container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    height: calc(60vh - 300px);
+  }
+
+  .overlay_text {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    font-family: luckiest guy;
+    font-size: 2.5rem;
+    white-space: nowrap;
+  }
+
+  h1 {
+    padding: 20% 10%;
+    stroke: orange;
+  }
+
+  /* VARIANT FORM */
+  .variant-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .variant {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  .variant input[type="checkbox"] {
+    display: none;
+  }
+  .variant label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .variant label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .variant input[type="checkbox"]:checked + label::before {
+    background-color: #b3d9ff;
+    border-color: #66b3ff;
+  }
+  .variant input[type="checkbox"]:disabled + label::before {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+</style>
