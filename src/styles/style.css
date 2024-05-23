@@ -5,6 +5,7 @@
 }
 body {
   background-color: #f2f7fa;
+  box-sizing: border-box;
   color: #12375b;
 }
 

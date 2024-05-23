@@ -2,7 +2,6 @@
 import Is from "../components/Is.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import Singleis from "../components/Singleis.astro";
 import "../styles/style.css";
 
 const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
@@ -29,20 +28,7 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       <header>
         <Header />
       </header>
-      <div class="image_container">
-        <div class="billeder">
-          <img src="img/citroner.svg" alt="Citroner" />
-        </div>
-        <div class="overlay_text">ISVARIANTER</div>
-        <div class="overlay_text_1">
-          <img class="billede_2" src="img/nut.png" alt="nut" />
-          = Indeholder Nødder
-        </div>
-        <div class="overlay_text_2">
-          <img class="billede_1" src="img/vegan.png" alt="vegan" />
-          = Vegansk
-        </div>
-      </div>
+      <h1>ISVARIANTER</h1>
 
       <section class="varianter">
         {
@@ -56,16 +42,10 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
     <footer><Footer /></footer>
   </body>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    .billeder {
-    }
-    body {
-      box-sizing: border-box;
-      background-color: #dfebf3;
+    h1 {
+      background-image: url(/img/spiseris.png);
+      background-size: cover;
+      padding-left: 24px;
     }
 
     .produkt_img {
@@ -74,21 +54,6 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       width: 250px;
     }
 
-    .image_container {
-      position: relative;
-      text-align: center;
-      color: white;
-      width: 100%;
-      height: 100%;
-      height: calc(80vh - 300px);
-    }
-
-    .image_container img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      height: calc(80vh - 300px);
-    }
     .billede_1 {
       height: 20px !important;
       width: 20px !important;
@@ -98,34 +63,6 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       width: 20px !important;
     }
 
-    .overlay_text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: luckiest guy;
-      font-size: 2.5rem;
-      white-space: nowrap;
-    }
-    .overlay_text_1 {
-      position: absolute;
-      top: 80%;
-      left: 10%;
-
-      font-family: luckiest guy;
-      font-size: 1rem;
-      white-space: nowrap;
-      background-image: url(/img/vegan.jpg);
-    }
-    .overlay_text_2 {
-      position: absolute;
-      top: 70%;
-      left: 10%;
-
-      font-family: luckiest guy;
-      font-size: 1rem;
-      white-space: nowrap;
-    }
     .varianter {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -134,12 +71,21 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
     a:link {
       text-decoration: none;
     }
+    @media (min-width: 768px) {
+      h1 {
+        padding-left: 50px;
+      }
+    }
 
-    @media (min-width: 800px) {
+    @media (min-width: 1024px) {
       .varianter {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin: auto;
+      }
+
+      h1 {
+        padding-left: 104px;
       }
     }
   </style>
