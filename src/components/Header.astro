@@ -24,22 +24,23 @@
 
 <style>
   /*menu*/
+
   header {
     position: absolute;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 40px;
+    padding-bottom: 90px;
     background-image: url(/img/headerbillede.png);
     background-size: contain;
     background-repeat: no-repeat;
   }
 
   .logo {
-    height: 50px;
-    margin-left: 50px;
+    height: 100px;
+    margin-left: 10px;
   }
 
   .menu {
@@ -75,16 +76,27 @@
   }
 
   .burger-menu span {
-    width: 25px;
+    width: 20px;
     height: 2px;
     background: #ea9942;
     margin: 4px 0;
   }
 
+  @media (max-width: 1142px) {
+    .menu a {
+      font-size: 0.8rem;
+      padding: 10px;
+    }
+    header {
+      padding-top: 22px;
+    }
+
+   
+
   /* Media Query for mindre skærme */
   @media (max-width: 768px) {
     .logo {
-      height: 50px;
+      height: 40px;
       margin-left: 0;
     }
     .menu {
@@ -106,10 +118,10 @@
       display: flex;
     }
     header {
-      padding: 30px;
+      padding-top: 0;
+      padding-right: 15px;
     }
   }
-
   .menu.active {
     display: flex;
   }
