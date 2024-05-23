@@ -26,9 +26,9 @@ const { sizeandplace } = Astro.props;
   }
 
   .kontakt_os {
-    position: absolute;
+    position: unset;
     width: 122px;
-    left: 254px;
+    margin-left: 254px;
     top: 840px;
   }
   @media (min-width: 768px) {
@@ -36,6 +36,12 @@ const { sizeandplace } = Astro.props;
       width: 170px;
       top: 1487px;
       left: 600px;
+    }
+
+    .kontakt_os {
+      position: unset;
+      width: 200px;
+      margin-left: 500px;
     }
   }
   @media (min-width: 1024px) {
@@ -46,10 +52,9 @@ const { sizeandplace } = Astro.props;
     }
 
     .kontakt_os {
-      position: absolute;
+      position: unset;
       width: 200px;
-      left: 1119px;
-      top: 833px;
+      margin-left: 1119px;
     }
   }
 </style>
