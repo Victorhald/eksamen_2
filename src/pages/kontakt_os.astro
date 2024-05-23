@@ -21,18 +21,13 @@ import Blandetis from "../components/Blandetis.astro";
   <body>
     <header><Header /></header>
     <main>
-      <div class="image_container">
-        <div class="billeder">
-          <img src="img/citroner.svg" alt="Citroner" />
-        </div>
-        <div class="overlay_text"><h1>Kontakt os</h1></div>
-      </div>
-
+      <h1>KONTAKT OS</h1>
       <div class="grid_1_1">
         <div>
           <div>
             <p>
-              Vi vil meget gerne høre fra dig! <br /><br /> Uanset om du hat spørgsmål til vores produkter, brug for hjælp eller ønsker at give feedback, er du altid velkommen til at kontakte os. <br /><br /> Du kan kontakte os via formularen her på siden eller du kan fange os på mail@sicilianskis.dk eller +45 30 22 30 89. <br /><br /> Vi bestræber os efter at vende tilbage indenfor 2 hverdage.
+              Vi vil meget gerne høre fra dig! <br /><br /> Uanset om du hat spørgsmål til vores produkter, brug for hjælp eller ønsker at give feedback, er du altid velkommen til at kontakte os. <br /><br /> Du kan kontakte os via formularen her på siden eller du kan fange os på mail@sicilianskis.dk eller +45 30 22 30 89. <br /><br /> Vi bestræber
+              os efter at vende tilbage indenfor 2 hverdage.
             </p>
           </div>
         </div>
@@ -83,8 +78,9 @@ import Blandetis from "../components/Blandetis.astro";
           white-space: nowrap;
         }
         h1 {
-          padding: 20% 10%;
-          stroke: orange;
+          background-image: url(/img/spiseris.png);
+          background-size: cover;
+          padding-left: 24px;
         }
 
         label {
@@ -143,23 +139,12 @@ import Blandetis from "../components/Blandetis.astro";
             margin: 100px 104px -105px 104px;
           }
 
-          .overlay_text {
-            position: absolute;
-            top: 50%;
-            left: 370px;
-            transform: translate(-50%, -50%);
-          }
-
-          .image_container {
-            height: calc(80vh - 300px);
-          }
-          .image_container img {
-            height: calc(80vh - 300px);
-          }
-
           .is {
             width: 15%;
             margin-left: 780px;
+          }
+          h1 {
+            padding-left: 104px;
           }
         }
 
@@ -167,6 +152,10 @@ import Blandetis from "../components/Blandetis.astro";
           .is {
             width: 12%;
             margin-left: 1160px;
+          }
+
+          h1 {
+            padding-left: 50px;
           }
         }
       </style>
