@@ -23,7 +23,11 @@ import Header from "../components/Header.astro";
 
       <div class="grid_1_1">
         <div>
-          <p>Velkommen til Siciliansk Is! Vi er glade for at kunne dele vores passion for is med jer alle. <br /> <br /> Vores rejse begyndte med en dyb kærlighed til autentisk siciliansk gelato og en stærk forbindelse til Sicilien, der går tilbage til Davids families rødder. <br /> <br /> Da vi besluttede at åbne vores egen isbutik, vidste vi, at vi ville bringe den autentiske smag af Sicilien til København</p>
+          <p>
+            Velkommen til Siciliansk Is! Vi er glade for at kunne dele vores passion for is med jer alle. <br />
+            <br /> Vores rejse begyndte med en dyb kærlighed til autentisk siciliansk gelato og en stærk forbindelse til Sicilien, der går tilbage til Davids families rødder. <br />
+            <br /> Da vi besluttede at åbne vores egen isbutik, vidste vi, at vi ville bringe den autentiske smag af Sicilien til København
+          </p>
         </div>
         <div>
           <p>Vores is er produceret fra bunden i vores ene butik på Skydebanegade, med ingredienser importeret direkte fra Sicilien for at sikre, at vores gelato smager præcis som på Sicilien. <br /> <br /> Vi inviterer dig til at komme og smage vores is, og opleve et stykke af Sicilien her hos os. <br /> <br /> Velbekommen!</p>
@@ -59,14 +63,14 @@ import Header from "../components/Header.astro";
 <style>
   h1 {
     background-image: url(/img/citroner.svg);
-    padding: 20% 10%;
-    stroke: orange;
+    padding-left: 24px;
   }
 
   p {
-    padding: 5% 7%;
     line-height: 2;
+    padding-left: 24px;
     font-weight: 200;
+    padding-right: 24px;
   }
 
   h2 {
@@ -93,6 +97,9 @@ import Header from "../components/Header.astro";
     display: none;
   }
   @media (min-width: 1024px) {
+    h1 {
+      padding-left: 50px;
+    }
     .grid_1_1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -106,10 +113,14 @@ import Header from "../components/Header.astro";
       width: 80%;
       padding-top: 25%;
     }
+    p {
+      padding-left: 104px;
+      padding-right: 104px;
+    }
   }
   @media (min-width: 768px) {
     h1 {
-      padding: 8% 5%;
+      padding-left: 104px;
     }
 
     .grid_1_1 {
@@ -119,6 +130,10 @@ import Header from "../components/Header.astro";
     .is {
       width: 40%;
       padding-top: 13%;
+    }
+    p {
+      padding-left: 50px;
+      padding-right: 50px;
     }
   }
 </style>

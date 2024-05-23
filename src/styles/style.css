@@ -18,6 +18,8 @@ h1 {
   color: white;
   letter-spacing: 0.5px;
   text-shadow: -2px -2px 0 #ea9942, 2px -2px 0 #ea9942, -2px 2px 0 #ea9942, 2px 2px 0 #ea9942, 2px 0 0 #ea9942, -2px 0 0 #ea9942, 0 2px 0 #ea9942, 0 -2px 0 #ea9942;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 h2 {
@@ -72,6 +74,8 @@ p {
   h1 {
     font-size: 6rem;
     text-shadow: -4px -4px 0 #ea9942, 4px -4px 0 #ea9942, -4px 4px 0 #ea9942, 4px 4px 0 #ea9942, 4px 0 0 #ea9942, -4px 0 0 #ea9942, 0 4px 0 #ea9942, 0 -4px 0 #ea9942;
+    padding-top: 314px;
+    padding-bottom: 156px;
   }
 
   h2 {
