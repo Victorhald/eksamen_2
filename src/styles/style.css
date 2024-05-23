@@ -51,7 +51,24 @@ p {
   letter-spacing: 0.5px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 1024px) {
   h1 {
     font-size: 6rem;
     text-shadow: -4px -4px 0 #ea9942, 4px -4px 0 #ea9942, -4px 4px 0 #ea9942, 4px 4px 0 #ea9942, 4px 0 0 #ea9942, -4px 0 0 #ea9942, 0 4px 0 #ea9942, 0 -4px 0 #ea9942;
