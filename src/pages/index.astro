@@ -103,8 +103,8 @@ import Footer from "../components/Footer.astro";
           </div>
         </div>
         <a href="../isvarianter">
-          <div class="button">
-            <Knap button_text="SE ALLE ISVARIANTER" variant="orange" class="button_orange" />
+          <div class="button button_orange">
+            <Knap button_text="SE ALLE ISVARIANTER" variant="orange" />
           </div>
         </a>
       </div>
@@ -145,9 +145,9 @@ import Footer from "../components/Footer.astro";
     gap: 30px;
   }
   h3 {
-    width: 350px;
     margin-left: 24px;
     padding-top: 20px;
+    line-height: 35px;
   }
 
   .hjemmelavetis {
@@ -207,6 +207,9 @@ import Footer from "../components/Footer.astro";
     height: 291px;
     padding-bottom: 30px;
   }
+  .button_orange {
+    margin-top: 30px;
+  }
 
   .is_priser,
   .bestsellers {
@@ -261,7 +264,6 @@ import Footer from "../components/Footer.astro";
       margin-right: 50px;
     }
     h3 {
-      width: 600px;
       margin-left: 50px;
       margin-bottom: 20px;
     }
@@ -287,7 +289,6 @@ import Footer from "../components/Footer.astro";
       gap: 0;
     }
     .h3 {
-      width: 400px;
       padding-top: 40px;
     }
     h4 {
@@ -366,15 +367,13 @@ import Footer from "../components/Footer.astro";
       padding-top: 20px;
     }
     h3 {
-      width: 1000px;
       margin-left: 104px;
       padding-top: 50px;
+      line-height: 60px;
     }
     .h3 {
-      width: 450px;
       margin-left: 104px;
       padding-top: 70px;
-      line-height: 35px;
     }
 
     .is_priser_grid {
