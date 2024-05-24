@@ -28,7 +28,18 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
       <header>
         <Header />
       </header>
-      <h1>ISVARIANTER</h1>
+      <div class="h1h4">
+        <h1>ISVARIANTER</h1>
+        <br />
+        <div class="veganskis">
+          <img class="nut_vegan" src="/img/vegan.png" alt="blomst" />
+          <h4 class="h4">= Vegansk is</h4>
+        </div>
+        <div class="veganskis">
+          <img class="nut_vegan" src="/img/nut.png" alt="blomst" />
+          <h4 class="h4">= Spor af nødder</h4>
+        </div>
+      </div>
 
       <section class="varianter">
         {
@@ -41,10 +52,14 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
     <Footer />
   </body>
   <style>
-    h1 {
+    .h1h4 {
       background-image: url(/img/spiseris.png);
       background-size: cover;
       padding-left: 24px;
+      padding-bottom: 60px;
+    }
+    h1 {
+      padding-bottom: 0;
     }
 
     .produkt_img {
@@ -65,26 +80,63 @@ const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/produ
     .varianter {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      margin: auto;
+      margin-top: 24px;
     }
     a:link {
       text-decoration: none;
     }
-    @media (min-width: 768px) {
-      h1 {
-        padding-left: 50px;
-      }
+    .h4 {
+      color: white;
     }
 
-    @media (min-width: 1024px) {
+    .veganskis {
+      display: flex;
+      gap: 5px;
+    }
+
+    .nut_vegan {
+      width: 15px;
+      height: 15px;
+    }
+    @media (min-width: 768px) {
       .varianter {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        margin: auto;
+        margin-top: 50px;
+      }
+      h1 {
+        padding-bottom: 0;
       }
 
+      .h1h4 {
+        padding-left: 50px;
+        padding-bottom: 100px;
+      }
+      .nut_vegan {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .varianter {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-top: 60px;
+        margin-left: 90px;
+        margin-right: 90px;
+        gap: 60px;
+      }
       h1 {
+        padding-bottom: 0;
+      }
+
+      .h1h4 {
         padding-left: 104px;
+        padding-bottom: 156px;
+      }
+      .nut_vegan {
+        width: 25px;
+        height: 25px;
       }
     }
   </style>
