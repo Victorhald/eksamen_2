@@ -1,6 +1,6 @@
 ---
 import "../styles/style.css";
-import Footer from "../components/Footer.astro";
+import Footer_historien_bag from "../components/Footer_historien_bag.astro";
 import Header from "../components/Header.astro";
 ---
 
@@ -54,86 +54,86 @@ import Header from "../components/Header.astro";
         <img src="/img/banner.png" alt="Banner" class="banner" />
       </div>
       <footer>
-        <Footer />
+        <Footer_historien_bag />
       </footer>
     </main>
+
+    <style>
+      h1 {
+        background-image: url(/img/citroner.svg);
+        padding-left: 24px;
+      }
+
+      p {
+        line-height: 2;
+        padding-left: 24px;
+        font-weight: 200;
+        padding-right: 24px;
+      }
+
+      h2 {
+        padding: 7% 7% 0 7%;
+      }
+
+      .grid_1_1 {
+        padding: 8% 3%;
+      }
+
+      .is {
+        display: flex;
+        width: 50%;
+        margin: 5% auto;
+        padding-bottom: 5%;
+      }
+
+      .banner_div {
+        background-color: #dfebf3;
+        padding: 10% 0;
+      }
+
+      .footer_banner {
+        display: none;
+      }
+      @media (min-width: 1024px) {
+        h1 {
+          padding-left: 50px;
+        }
+        .grid_1_1 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding: 10% 3%;
+        }
+
+        h2 {
+          padding-bottom: 5%;
+        }
+        .is {
+          width: 80%;
+          padding-top: 25%;
+        }
+        p {
+          padding-left: 104px;
+          padding-right: 104px;
+        }
+      }
+      @media (min-width: 768px) {
+        h1 {
+          padding-left: 104px;
+        }
+
+        .grid_1_1 {
+          padding: 5% 3%;
+        }
+
+        .is {
+          width: 40%;
+          padding-top: 13%;
+        }
+        p {
+          padding-left: 50px;
+          padding-right: 50px;
+        }
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  h1 {
-    background-image: url(/img/citroner.svg);
-    padding-left: 24px;
-  }
-
-  p {
-    line-height: 2;
-    padding-left: 24px;
-    font-weight: 200;
-    padding-right: 24px;
-  }
-
-  h2 {
-    padding: 7% 7% 0 7%;
-  }
-
-  .grid_1_1 {
-    padding: 8% 3%;
-  }
-
-  .is {
-    display: flex;
-    width: 50%;
-    margin: 5% auto;
-    padding-bottom: 5%;
-  }
-
-  .banner_div {
-    background-color: #dfebf3;
-    padding: 10% 0;
-  }
-
-  .footer_banner {
-    display: none;
-  }
-  @media (min-width: 1024px) {
-    h1 {
-      padding-left: 50px;
-    }
-    .grid_1_1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 10% 3%;
-    }
-
-    h2 {
-      padding-bottom: 5%;
-    }
-    .is {
-      width: 80%;
-      padding-top: 25%;
-    }
-    p {
-      padding-left: 104px;
-      padding-right: 104px;
-    }
-  }
-  @media (min-width: 768px) {
-    h1 {
-      padding-left: 104px;
-    }
-
-    .grid_1_1 {
-      padding: 5% 3%;
-    }
-
-    .is {
-      width: 40%;
-      padding-top: 13%;
-    }
-    p {
-      padding-left: 50px;
-      padding-right: 50px;
-    }
-  }
-</style>
