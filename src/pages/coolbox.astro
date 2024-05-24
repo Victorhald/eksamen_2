@@ -44,8 +44,8 @@ import Gulis from "../components/Gulis.astro";
       </div>
 
       <div>
-        <div class="variant_afsnit">
-          <h2>VÆLG 2 VARIANTER TIL DIN BOX</h2>
+        <section class="variant_afsnit">
+          <h2 class="h2">VÆLG 2 VARIANTER TIL DIN BOX</h2>
 
           <form id="variantForm">
             <div class="variant-container varianter_grid">
@@ -122,10 +122,11 @@ import Gulis from "../components/Gulis.astro";
               </div>
             </div>
           </form>
-        </div>
+          <Gulis sizeandplace="coolbox" />
+        </section>
 
         <div class="afsnit_2">
-          <h2>SKRIV DINE OPLYSNINGER NEDENFOR</h2>
+          <h2 class="h2">SKRIV DINE OPLYSNINGER NEDENFOR</h2>
 
           <p class="tekst_2">Vi bestræber os efter at vende tilbage indenfor 2 hverdage.</p>
         </div>
@@ -213,28 +214,32 @@ import Gulis from "../components/Gulis.astro";
     header {
       z-index: 1000;
     }
-    img {
-      max-width: 100%;
-    }
-
     h1 {
       padding-left: 24px;
       background-image: url(/img/spiseris.png);
       background-size: cover;
     }
+    section {
+      position: relative;
+    }
 
     .afsnit {
       margin: 45px 0;
     }
-    h2,
+    h2 {
+      margin-left: 24px;
+    }
+
     label {
       margin-bottom: 9px;
     }
-    h2,
-    p {
-      margin: 10px 24px;
-    }
 
+    p {
+      margin-right: 24px;
+    }
+    .pris {
+      font-weight: 500;
+    }
     label {
       font-family: "Margarine";
       text-transform: uppercase;
@@ -243,8 +248,9 @@ import Gulis from "../components/Gulis.astro";
 
     .img_pige {
       display: flex;
-      margin: 40px auto;
+      margin-left: 24px;
       width: 250px;
+      padding-bottom: 30px;
     }
 
     /* VARIANT FORM */
@@ -253,17 +259,19 @@ import Gulis from "../components/Gulis.astro";
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      margin: 10px 24px 10px 24px;
+      margin: 10px 24px 10px;
     }
 
     .variant_afsnit {
       background-color: #dfebf3;
       padding-top: 25px;
+      padding-left: 24px;
     }
     .variant {
       display: flex;
       align-items: center;
-      margin: 10px;
+      margin-left: 0;
+      margin-top: 10px;
     }
     .variant input[type="checkbox"] {
       display: none;
@@ -320,18 +328,14 @@ import Gulis from "../components/Gulis.astro";
     }
 
     .icon {
-      margin-left: 10px;
       width: 16px;
     }
 
     .ikoner {
-      display: flex;
-      margin: 10px auto 20px 24px;
       padding-bottom: 25px;
     }
     .ikoner p {
       width: 160px;
-      margin: 0 10px;
     }
 
     .afsnit_2 {
@@ -341,12 +345,22 @@ import Gulis from "../components/Gulis.astro";
     footer {
       margin-top: 50px;
     }
+    .h2 {
+      margin-left: 0;
+    }
 
     @media (min-width: 768px) {
       .grid_overst {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 20px 0;
+      }
+      p {
+        margin-right: 50px;
+      }
+
+      .tekst_2 {
+        margin-left: 50px;
       }
 
       .grid_overst > div:first-child {
@@ -356,31 +370,34 @@ import Gulis from "../components/Gulis.astro";
       .grid_overst > div:last-child {
         order: 1;
       }
-
+      .variant_afsnit {
+        padding-left: 0;
+      }
       .img_pige {
-        width: 315px;
+        width: 300px;
         height: auto;
+        padding-left: 50px;
+        padding-top: 100px;
+        margin-left: 0;
       }
       .varianter_grid {
         display: flex;
         flex-direction: row;
         gap: 100px;
-        margin: 40px 0px;
-        justify-content: center;
+        margin-left: 50px;
       }
 
       .ikoner {
         display: flex;
-        margin: 10px;
         margin-bottom: 30px;
         padding-bottom: 20px;
-        gap: 20px;
-        justify-content: center;
+        gap: 120px;
+        padding-left: 50px;
+        margin-left: 0;
       }
 
       .ikoner p {
         width: unset;
-        margin: 0 10px;
       }
 
       .variant-container {
@@ -391,9 +408,17 @@ import Gulis from "../components/Gulis.astro";
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
+        margin-left: 0;
+        padding-left: 50px;
       }
       h1 {
         padding-left: 50px;
+      }
+      .h2 {
+        margin-left: 50px;
+      }
+      h2 {
+        margin-left: 0;
       }
     }
 
@@ -416,6 +441,8 @@ import Gulis from "../components/Gulis.astro";
       .variant_afsnit h2,
       .afsnit_2 {
         padding-left: 104px;
+        margin-left: 0;
+        padding-right: 104px;
       }
 
       h2,
@@ -441,6 +468,38 @@ import Gulis from "../components/Gulis.astro";
 
       .button {
         margin-top: 20px;
+      }
+
+      .img_pige {
+        display: flex;
+        margin-left: 104px;
+        width: 500px;
+        padding-bottom: 30px;
+        padding-left: 0;
+      }
+
+      .varianter_grid {
+        display: flex;
+        flex-direction: row;
+        gap: 140px;
+        margin-left: 104px;
+        padding-left: 0;
+      }
+
+      .h2 {
+        padding-left: 0;
+        margin-left: 0;
+      }
+
+      .ikoner {
+        padding-left: 104px;
+        gap: 204px;
+      }
+      .tekst_2 {
+        margin-left: 0;
+      }
+      ..grid_overst {
+        padding-right: 104px;
       }
     }
   </style>

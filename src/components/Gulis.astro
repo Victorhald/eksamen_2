@@ -24,15 +24,32 @@ const { sizeandplace } = Astro.props;
     position: absolute;
     bottom: 0px;
   }
+  .coolbox {
+    aspect-ratio: 73/121;
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 280px;
+  }
 
   @media (min-width: 768px) {
     .index {
       width: 130px;
     }
+
+    .coolbox {
+      width: 130px;
+      left: 600px;
+    }
   }
   @media (min-width: 1024px) {
     .index {
       width: 200px;
+    }
+
+    .coolbox {
+      width: 200px;
+      left: 1100px;
     }
   }
 </style>
