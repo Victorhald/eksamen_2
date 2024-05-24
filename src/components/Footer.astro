@@ -46,7 +46,7 @@ import "../styles/style.css";
     </div>
   </div>
 
-  <div>
+  <div class="logo_container">
     <img src="/img/logo.webp" alt="SI Logo" class="logo" />
   </div>
 </div>
@@ -55,7 +55,6 @@ import "../styles/style.css";
   <div>
     <img src="/img/logo.webp" alt="SI Logo" class="logo" />
   </div>
-
   <div>
     <h4>Kontakt</h4>
     <p>+45 30 22 30 89</p>
@@ -122,8 +121,9 @@ import "../styles/style.css";
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 40px auto;
-    gap: 40px;
-    margin-left: 45px;
+    gap: 35px;
+    margin-left: 24px;
+    margin-right: 24px;
   }
 
   .genveje {
@@ -147,6 +147,18 @@ import "../styles/style.css";
   .rapport {
     width: 98%;
     height: auto;
+  }
+  .logo_container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 10vh; /* Eksempelvis for at fylde hele højden af viewporten */
+  }
+
+  .logo {
+    width: 60%; /* Sørger for, at logoet ikke overskrider containerens bredde */
+    height: auto; /* Bevarer aspektforholdet */
+    margin-left: 0;
   }
 
   @media (min-width: 1024px) {
