@@ -19,26 +19,24 @@ import Header from "../components/Header.astro";
   <body>
     <header><Header /></header>
     <main>
-      <h1 class="historien_bag">Historien bag</h1>
+      <div class="hero_billede">
+        <h1 class="historien_bag">Historien bag</h1>
 
-      <div class="grid_1_1">
-        <div>
-          <p>
-            Velkommen til Siciliansk Is! Vi er glade for at kunne dele vores passion for is med jer alle. <br />
-            <br /> Vores rejse begyndte med en dyb kærlighed til autentisk siciliansk gelato og en stærk forbindelse til Sicilien, der går tilbage til Davids families rødder. <br />
-            <br /> Da vi besluttede at åbne vores egen isbutik, vidste vi, at vi ville bringe den autentiske smag af Sicilien til København
-          </p>
-        </div>
-        <div>
-          <p>Vores is er produceret fra bunden i vores ene butik på Skydebanegade, med ingredienser importeret direkte fra Sicilien for at sikre, at vores gelato smager præcis som på Sicilien. <br /> <br /> Vi inviterer dig til at komme og smage vores is, og opleve et stykke af Sicilien her hos os. <br /> <br /> Velbekommen!</p>
+        <div class="grid_1_1">
+          <div>
+            <p>
+              Velkommen til Siciliansk Is! Vi er glade for at kunne dele vores passion for is med jer alle. <br />
+              <br /> Vores rejse begyndte med en dyb kærlighed til autentisk siciliansk gelato og en stærk forbindelse til Sicilien, der går tilbage til Davids families rødder. <br />
+              <br /> Da vi besluttede at åbne vores egen isbutik, vidste vi, at vi ville bringe den autentiske smag af Sicilien til København
+            </p>
+          </div>
+          <div>
+            <p>Vores is er produceret fra bunden i vores ene butik på Skydebanegade, med ingredienser importeret direkte fra Sicilien for at sikre, at vores gelato smager præcis som på Sicilien. <br /> <br /> Vi inviterer dig til at komme og smage vores is, og opleve et stykke af Sicilien her hos os. <br /> <br /> Velbekommen!</p>
+          </div>
         </div>
       </div>
 
-      <div>
-        <img src="/img/butik.png" alt="Siciliansk Is Butik" class="butik" />
-      </div>
-
-      <div class="grid_1_1">
+      <div class="grid_2_2">
         <div>
           <h2>Sicilien</h2>
           <p>Jeg, David, den ene arm af butikken, er halv sicilianer. Min far kommer fra hjertet af Sicilien, hvor han er vokset op omgivet af øens rige kultur og kulinariske traditioner.</p>
@@ -53,14 +51,18 @@ import Header from "../components/Header.astro";
       <div class="banner_div">
         <img src="/img/banner.png" alt="Banner" class="banner" />
       </div>
+
       <footer>
         <Footer_historien_bag />
       </footer>
     </main>
 
     <style>
-      h1 {
+      .hero_billede {
         background-image: url(/img/citroner.svg);
+      }
+
+      h1 {
         padding-left: 24px;
       }
 
@@ -75,7 +77,8 @@ import Header from "../components/Header.astro";
         padding: 7% 7% 0 7%;
       }
 
-      .grid_1_1 {
+      .grid_1_1,
+      .grid_2_2 {
         padding: 8% 3%;
       }
 
@@ -98,7 +101,8 @@ import Header from "../components/Header.astro";
         h1 {
           padding-left: 50px;
         }
-        .grid_1_1 {
+        .grid_1_1,
+        .grid_2_2 {
           display: grid;
           grid-template-columns: 1fr 1fr;
           padding: 10% 3%;
