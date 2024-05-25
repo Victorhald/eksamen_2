@@ -24,7 +24,7 @@ import Gulis from "../components/Gulis.astro";
     <main>
       <h1>GELATO COOLBOX</h1>
       <div class="grid_overst">
-        <div>
+        <div class="afsnit1_2">
           <div class="afsnit">
             <h2>Hjemmelavet is til din fest</h2>
             <p>Vil du have lækker, frisklavet Siciliansk is til brylluppet, fødselsdagen eller firmarrangementet? Lej en Gelato Cool Box og spis alt det is du har lyst til! Du skal bare vælge smage, og så klarer vi resten.</p>
@@ -39,7 +39,7 @@ import Gulis from "../components/Gulis.astro";
         </div>
 
         <div>
-          <img src="/img/gelato_pige.svg" alt="Cool Box" class="img_pige" />
+          <img src="/img/gelato_vafler.webp" alt="Cool Box" class="img_pige" />
         </div>
       </div>
 
@@ -216,7 +216,7 @@ import Gulis from "../components/Gulis.astro";
     }
     h1 {
       padding-left: 24px;
-      background-image: url(/img/spiseris.png);
+      background-image: url(/img/gelato_hero.webp);
       background-size: cover;
     }
     section {
@@ -236,6 +236,7 @@ import Gulis from "../components/Gulis.astro";
 
     p {
       margin-right: 24px;
+      margin-left: 24px;
     }
     .pris {
       font-weight: 500;
@@ -250,7 +251,8 @@ import Gulis from "../components/Gulis.astro";
       display: flex;
       margin-left: 24px;
       width: 250px;
-      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-radius: 25px;
     }
 
     /* VARIANT FORM */
@@ -346,7 +348,7 @@ import Gulis from "../components/Gulis.astro";
       margin-top: 50px;
     }
     .h2 {
-      margin-left: 0;
+      margin-left: 24px;
     }
 
     @media (min-width: 768px) {
@@ -357,6 +359,7 @@ import Gulis from "../components/Gulis.astro";
       }
       p {
         margin-right: 50px;
+        margin-left: 0;
       }
 
       .tekst_2 {
@@ -376,9 +379,9 @@ import Gulis from "../components/Gulis.astro";
       .img_pige {
         width: 300px;
         height: auto;
-        padding-left: 50px;
-        padding-top: 100px;
-        margin-left: 0;
+        margin-left: 50px;
+        margin-top: 100px;
+        margin-left: 50px;
       }
       .varianter_grid {
         display: flex;
@@ -448,6 +451,7 @@ import Gulis from "../components/Gulis.astro";
       h2,
       p {
         margin-left: 0;
+        margin-right: 104px;
       }
 
       .oplysninger_form input,
@@ -474,7 +478,7 @@ import Gulis from "../components/Gulis.astro";
         display: flex;
         margin-left: 104px;
         width: 500px;
-        padding-bottom: 30px;
+        margin-bottom: 30px;
         padding-left: 0;
       }
 
@@ -500,6 +504,9 @@ import Gulis from "../components/Gulis.astro";
       }
       ..grid_overst {
         padding-right: 104px;
+      }
+      .afsnit1_2 {
+        margin-top: 140px;
       }
     }
   </style>
