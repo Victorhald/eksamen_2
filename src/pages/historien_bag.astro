@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import Footer_historien_bag from "../components/Footer_historien_bag.astro";
 import Header from "../components/Header.astro";
+import Slideshow from "../components/Slideshow.astro";
 ---
 
 <html lang="en">
@@ -44,7 +45,7 @@ import Header from "../components/Header.astro";
         </div>
 
         <div>
-          <img src="/img/is.png" alt="Is" class="is" />
+          <Slideshow />
         </div>
       </div>
 
@@ -58,9 +59,14 @@ import Header from "../components/Header.astro";
     </main>
 
     <style>
+      header {
+        z-index: 100;
+      }
       .hero_billede {
         background-image: url(/img/hero_billede_historienbag.png);
         padding-bottom: 100px;
+        opacity: 70%;
+        z-index: -1;
       }
 
       h1 {
@@ -84,9 +90,10 @@ import Header from "../components/Header.astro";
       }
 
       .grid_1_1 {
-        background-color: white;
+        background-color: rgb(255, 255, 255);
         color: black;
         margin: 24px;
+        opacity: 90%;
       }
 
       .is {
@@ -104,6 +111,7 @@ import Header from "../components/Header.astro";
       .footer_banner {
         display: none;
       }
+
       @media (min-width: 1024px) {
         h1 {
           padding-left: 50px;
@@ -121,9 +129,10 @@ import Header from "../components/Header.astro";
 
         .grid_1_1 {
           background-color: white;
-          opacity: 70%;
+          opacity: 90%;
           color: black;
           margin: 50px;
+          border-radius: 40px;
         }
 
         h2 {
