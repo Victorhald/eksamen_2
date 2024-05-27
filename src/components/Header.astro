@@ -96,25 +96,15 @@
       margin-left: 0px;
       padding-top: 5px;
     }
-
-    header {
-      position: absolute;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 90px;
-      background-image: url(/img/markise_mobil.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
   }
 
   /* Media Query for mindre skærme */
   @media (max-width: 768px) {
     .logo {
       height: 40px;
-      margin-left: 0;
+      margin-left: 2px;
+      margin-top: 2px;
+      padding-top: 0;
     }
     .menu {
       display: none;
@@ -137,6 +127,18 @@
     header {
       padding-top: 0;
       padding-right: 15px;
+    }
+
+    header {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 90px;
+      background-image: url(/img/markise_mobil.png);
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
   .menu.active {
