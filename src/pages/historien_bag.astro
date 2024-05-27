@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import Footer_historien_bag from "../components/Footer_historien_bag.astro";
 import Header from "../components/Header.astro";
+import Slideshow from "../components/Slideshow.astro";
 ---
 
 <html lang="en">
@@ -40,11 +41,27 @@ import Header from "../components/Header.astro";
         <div>
           <h2>Sicilien</h2>
           <p>Jeg, David, den ene arm af butikken, er halv sicilianer. Min far kommer fra hjertet af Sicilien, hvor han er vokset op omgivet af øens rige kultur og kulinariske traditioner.</p>
+          <br />
+          <br />
           <p>Fra da jeg var helt lille har jeg tilbragt mange somre på Sicilien, hvor jeg sammen med min far og hans familie udforskede de lokale markeder. Vi var altid på jagt efter de bedste ingredienser, og det var her jeg lærte om den dybe kærlighed til mad, som er så karakteristisk for Sicilien.</p>
         </div>
 
         <div>
-          <img src="/img/is.png" alt="Is" class="is" />
+          <Slideshow />
+        </div>
+      </div>
+
+      <div class="grid_2_2 grid_2_2_2">
+        <div class="text">
+          <h2>VORES IS</h2>
+          <p>Vores is er lavet ud fra en siciliansk familieopskrift. Det er David selv, som alene laver isen i vores lille køkken bag vores butik på Skydebanegade. Vi bestræber os på kun at arbejde med de bedste, økologiske råvarer - og allerhelst fra Sicilien.</p>
+          <br />
+          <br />
+          <p>Det sker dog, at vi arbejder med vilde svenske havtorn eller danske jordbær, når de er i sæson. Selvom vi er en Siciliansk isbutik, er vi ikke blege for at indrømme, at danske jordbær er helt specielle, og at de fortjener en plads i vores isdisk, når de er i sæson.</p>
+        </div>
+
+        <div class="image">
+          <img src="/img/4_is.webp" alt="4 is" />
         </div>
       </div>
 
@@ -58,9 +75,15 @@ import Header from "../components/Header.astro";
     </main>
 
     <style>
+      header {
+        z-index: 100;
+      }
       .hero_billede {
+        position: relative;
         background-image: url(/img/hero_billede_historienbag.png);
         padding-bottom: 100px;
+        opacity: 70%;
+        z-index: -1;
       }
 
       h1 {
@@ -83,10 +106,19 @@ import Header from "../components/Header.astro";
         padding: 8% 3%;
       }
 
+      .grid_2_2 img {
+        display: flex;
+        border-radius: 25px;
+        max-width: 300px;
+        margin: auto;
+        margin-top: 55px;
+      }
+
       .grid_1_1 {
-        background-color: white;
+        background-color: rgb(255, 255, 255);
         color: black;
         margin: 24px;
+        opacity: 90%;
       }
 
       .is {
@@ -98,12 +130,14 @@ import Header from "../components/Header.astro";
 
       .banner_div {
         background-color: #dfebf3;
-        padding: 10% 0;
+        padding: 5% 0;
+        margin: 20px 0;
       }
 
       .footer_banner {
         display: none;
       }
+
       @media (min-width: 1024px) {
         h1 {
           padding-left: 50px;
@@ -116,14 +150,39 @@ import Header from "../components/Header.astro";
         .grid_2_2 {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          padding: 10% 3%;
+          padding: 35px 25px;
+          margin-left: 90px;
+          margin-right: auto;
+        }
+
+        .grid_2_2_2 {
+          grid-template-columns: 0.5fr 1fr;
+          margin-left: 90px;
+          gap: 120px;
+        }
+
+        .text {
+          order: 1;
+          max-width: 690px;
+        }
+
+        .image {
+          order: -1;
+        }
+
+        .grid_2_2 img {
+          max-width: 390px;
+          margin-top: 30px;
+          display: unset;
+          margin-left: 50px;
         }
 
         .grid_1_1 {
           background-color: white;
-          opacity: 70%;
+          opacity: 90%;
           color: black;
           margin: 50px;
+          border-radius: 40px;
         }
 
         h2 {
