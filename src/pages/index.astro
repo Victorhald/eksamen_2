@@ -37,7 +37,7 @@ import Footer from "../components/Footer.astro";
             <p class="p_labels aabninstider">Åbningstider</p>
             <p class="p_labels">Alle dage kl. 12 - 21</p>
             <br />
-            <a href="https://maps.app.goo.gl/Gb9uwtC9xeopXso29"><Knap button_text="FIND PÅ KORT" variant="orange" /></a>
+            <Knap href="https://maps.app.goo.gl/gsBNqCmMu9iipQhw9" button_text="FIND PÅ KORT" variant="orange" target="_blank" />
           </div>
           <div class="vesterbro">
             <h2>VESTERBRO</h2>
@@ -47,7 +47,7 @@ import Footer from "../components/Footer.astro";
             <p class="p_labels aabninstider">Åbningstider</p>
             <p class="p_labels">Alle dage kl. 12 - 21</p>
             <br />
-            <a href="https://maps.app.goo.gl/nGd963tdZJhy6Lid8"><Knap button_text="FIND PÅ KORT" variant="orange" /></a>
+            <Knap href="https://maps.app.goo.gl/nGd963tdZJhy6Lid8" button_text="FIND PÅ KORT" variant="orange" target="_blank" />
           </div>
         </div>
         <Gulis sizeandplace="index" />
@@ -71,48 +71,48 @@ import Footer from "../components/Footer.astro";
             <h3 class="h3">HJEMMELAVET IS TIL FESTEN</h3>
             <p class="hjemmelavetis">Vil du have lækker, frisklavet Siciliansk is til brylluppet, fødselsdagen eller firmaarrangementet? <br /> <br /> Lej en Gelato Cool Box og spis alt det is du har lyst til! <br /> <br /> Du skal bare vælge smage, og så klarer vi resten.</p>
             <div class="button">
-              <a href="/coolbox"><Knap button_text="BESTIL OG LÆS MERE" variant="blaa" class="button" /></a>
+              <Knap href="/coolbox" button_text="BESTIL OG LÆS MERE" variant="blaa" class="button" />
             </div>
           </div>
-
-          <div>
-            <img class="gelatopige" src="/img/hjemmelavetis.webp" alt="gelato_pige" />
-          </div>
         </div>
 
-        <Blandetis sizeandplace="index" />
+        <div>
+          <img class="gelatopige" src="/img/hjemmelavetis.webp" alt="gelato_pige" />
+        </div>
       </section>
-      <div class="bestsellers">
-        <h3>PRØV VORES BESTSELLERS</h3>
-        <div class="grid_4">
-          <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
 
-            <h4>PISTACIE</h4>
-          </div>
-          <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-            <h4>HASSELNØD</h4>
-          </div>
-          <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-            <h4>JORDBÆR SORBET</h4>
-          </div>
-          <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-            <h4>CHOKOLADE</h4>
-          </div>
-        </div>
-        <a href="../isvarianter">
-          <div class="button button_orange">
-            <Knap button_text="SE ALLE ISVARIANTER" variant="orange" />
-          </div>
-        </a>
-      </div>
+      <Blandetis sizeandplace="index" />
     </main>
+    <div class="bestsellers">
+      <h3>PRØV VORES BESTSELLERS</h3>
+      <div class="grid_4">
+        <div>
+          <img src="/public/img/varianter/chokolade.svg" alt="hej" />
+
+          <h4>PISTACIE</h4>
+        </div>
+        <div>
+          <img src="/public/img/varianter/chokolade.svg" alt="hej" />
+          <h4>HASSELNØD</h4>
+        </div>
+        <div>
+          <img src="/public/img/varianter/chokolade.svg" alt="hej" />
+          <h4>JORDBÆR SORBET</h4>
+        </div>
+        <div>
+          <img src="/public/img/varianter/chokolade.svg" alt="hej" />
+          <h4>CHOKOLADE</h4>
+        </div>
+      </div>
+      
+        <div class="button button_orange">
+          <Knap href="/isvarianter" button_text="SE ALLE ISVARIANTER" variant="orange" />
+        </div>
+      
+    </div>
   </body>
-  <Footer />
 </html>
+<Footer />
 
 <style>
   h1 {
