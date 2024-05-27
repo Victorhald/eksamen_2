@@ -174,9 +174,9 @@ import Gulis from "../components/Gulis.astro";
                 <Knap type="submit" button_text="SEND" variant="orange" class="button" />
               </div>
             </div>
-            <div class="is_skilt_container">
-              <div class="is_skilt_sprite"></div>
-            </div>
+          </div>
+          <div class="is_skilt_container">
+            <div class="is_skilt_sprite"></div>
           </div>
         </section>
         <script>
@@ -231,7 +231,7 @@ import Gulis from "../components/Gulis.astro";
       width: 150px;
       position: absolute;
       bottom: 0px;
-      left: 1100px;
+      display: none;
     }
 
     .is_skilt_sprite {
@@ -439,6 +439,22 @@ import Gulis from "../components/Gulis.astro";
       }
       h2 {
         margin-left: 0;
+      }
+
+      .is_skilt_container {
+        aspect-ratio: 218/361;
+        width: 130px;
+        position: absolute;
+        bottom: 0px;
+        left: 500px;
+        display: block;
+      }
+
+      .is_skilt_sprite {
+        background-image: url(/img/is_skilt.svg);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
       }
     }
 
