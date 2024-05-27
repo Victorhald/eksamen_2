@@ -140,6 +140,19 @@ import Slideshow from "../components/Slideshow.astro";
       }
 
       @media (min-width: 768px) {
+        .grid_2_2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding-left: 20px;
+        }
+
+        .text {
+          order: 1;
+        }
+
+        .image {
+          order: -1;
+        }
         h1 {
           padding-left: 104px;
         }
@@ -167,23 +180,22 @@ import Slideshow from "../components/Slideshow.astro";
           color: black;
           margin-left: 104px;
           margin-right: 104px;
+          border-radius: 45px;
         }
 
-        .grid_2_2_2 {
-          grid-template-columns: 0.1fr 1fr;
-          gap: 82px;
+        .grid_2_2_2,
+        .grid_2_2_2_2 {
+          padding-left: 76px;
         }
 
-        .grid_2_2_2 p {
-          padding-right: 5px;
+        .grid_2_2 p,
+        .grid_2_2 h2 {
+          padding-left: 0px;
+          margin: 0;
         }
 
         .grid_2_2_2 img {
           margin-left: 0;
-        }
-
-        .grid_2_2_2_2 {
-          padding-left: 100px;
         }
       }
 
@@ -203,6 +215,7 @@ import Slideshow from "../components/Slideshow.astro";
         }
 
         .grid_2_2_2_2 {
+          display: grid;
           grid-template-columns: 1fr 0.7fr;
           padding-left: 160px;
           padding-top: 0;
@@ -213,6 +226,7 @@ import Slideshow from "../components/Slideshow.astro";
           padding-top: 75px;
         }
         .grid_2_2_2 {
+          display: grid;
           grid-template-columns: 0.6fr 1fr;
           margin: auto;
           margin-left: 0;
