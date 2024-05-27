@@ -60,17 +60,38 @@ const { data } = Astro.props;
       height: 170px;
     }
   }
+
+  @media (min-width: 500px) {
+    .is_img {
+      width: 190px;
+      height: 190px;
+    }
+  }
   @media (min-width: 1024px) {
     .is_img {
       border-radius: 50%;
-      width: 250px;
-      height: 250px;
+      width: 170px;
+      height: 170px;
     }
     h4 {
       font-size: 1.5rem;
     }
     .produkt_div {
-      gap: 30px;
+      gap: 10px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .is_img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    .is_img {
+      width: 220px;
+      height: 220px;
     }
   }
 </style>
