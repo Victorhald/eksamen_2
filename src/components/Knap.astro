@@ -1,11 +1,9 @@
 ---
 const button_text = Astro.props.button_text;
-const { variant } = Astro.props;
+const { variant, href, target } = Astro.props;
 ---
 
-<div class="button">
-  <a href="" class={variant}>{button_text}</a>
-</div>
+<a href={href} class={variant} target={target}>{button_text}</a>
 
 <style>
   .orange {
