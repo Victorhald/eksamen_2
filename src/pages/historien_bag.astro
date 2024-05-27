@@ -37,13 +37,13 @@ import Slideshow from "../components/Slideshow.astro";
         </div>
       </div>
 
-      <div class="grid_2_2">
+      <div class="grid_2_2 grid_2_2_2_2">
         <div>
           <h2>Sicilien</h2>
-          <p>Jeg, David, den ene arm af butikken, er halv sicilianer. Min far kommer fra hjertet af Sicilien, hvor han er vokset op omgivet af øens rige kultur og kulinariske traditioner.</p>
+          <p>Jeg, David, den ene arm af butikken, er halv sicilianer. Min far kommer fra hjertet af Sicilien, hvor han er vokset op omgivet af øens rige kultur og kulinariske traditioner. Hans historier om Sicilien har altid fascineret mig og inspireret mit arbejde hos SI.</p>
           <br />
           <br />
-          <p>Fra da jeg var helt lille har jeg tilbragt mange somre på Sicilien, hvor jeg sammen med min far og hans familie udforskede de lokale markeder. Vi var altid på jagt efter de bedste ingredienser, og det var her jeg lærte om den dybe kærlighed til mad, som er så karakteristisk for Sicilien.</p>
+          <p>Fra da jeg var helt lille har jeg tilbragt mange somre på Sicilien, hvor jeg sammen med min far og hans familie udforskede de lokale markeder. Vi var altid på jagt efter de bedste ingredienser, og det var her jeg lærte om den dybe kærlighed til is, som er så karakteristisk for Sicilien.</p>
         </div>
 
         <div>
@@ -81,7 +81,7 @@ import Slideshow from "../components/Slideshow.astro";
       .hero_billede {
         position: relative;
         background-image: url(/img/hero_billede_historienbag.png);
-        padding-bottom: 100px;
+        padding-bottom: 20px;
         opacity: 70%;
         z-index: -1;
       }
@@ -114,6 +114,10 @@ import Slideshow from "../components/Slideshow.astro";
         margin-top: 55px;
       }
 
+      .grid_2_2_2 {
+        background-color: #dfebf3;
+      }
+
       .grid_1_1 {
         background-color: rgb(255, 255, 255);
         color: black;
@@ -129,13 +133,70 @@ import Slideshow from "../components/Slideshow.astro";
       }
 
       .banner_div {
+        margin: 40px 0;
+      }
+      footer {
         background-color: #dfebf3;
-        padding: 5% 0;
-        margin: 20px 0;
       }
 
-      .footer_banner {
-        display: none;
+      @media (min-width: 768px) {
+        .grid_2_2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding-left: 20px;
+        }
+
+        .text {
+          order: 1;
+        }
+
+        .image {
+          order: -1;
+        }
+        h1 {
+          padding-left: 104px;
+        }
+
+        .grid_1_1 {
+          padding: 5% 3%;
+        }
+
+        .is {
+          width: 40%;
+          padding-top: 13%;
+        }
+        p {
+          padding-left: 50px;
+          padding-right: 50px;
+        }
+
+        .grid_2_2 {
+          margin-left: 0;
+          padding-left: 45px;
+        }
+
+        .grid_1_1 {
+          background-color: white;
+          color: black;
+          margin-left: 104px;
+          margin-right: 104px;
+          border-radius: 45px;
+        }
+
+        .grid_2_2_2,
+        .grid_2_2_2_2 {
+          padding-left: 76px;
+        }
+
+        .grid_2_2 p,
+        .grid_2_2 h2 {
+          padding-left: 0px;
+          margin: 0;
+        }
+
+        .grid_2_2_2 img {
+          margin-left: 0;
+        }
       }
 
       @media (min-width: 1024px) {
@@ -150,15 +211,37 @@ import Slideshow from "../components/Slideshow.astro";
         .grid_2_2 {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          padding: 35px 25px;
-          margin-left: 90px;
-          margin-right: auto;
+          padding: 45px 25px;
         }
 
+        .grid_2_2_2_2 {
+          display: grid;
+          grid-template-columns: 1fr 0.7fr;
+          padding-left: 160px;
+          padding-top: 0;
+          padding-right: 62px;
+        }
+
+        .grid_2_2_2_2 h2 {
+          padding-top: 75px;
+        }
         .grid_2_2_2 {
-          grid-template-columns: 0.5fr 1fr;
-          margin-left: 90px;
-          gap: 120px;
+          display: grid;
+          grid-template-columns: 0.6fr 1fr;
+          margin: auto;
+          margin-left: 0;
+          padding-left: 110px;
+          padding-right: 140px;
+          gap: 40px;
+        }
+
+        .grid_2_2_2 img {
+          margin-left: 12px;
+        }
+
+        .grid_2_2 p,
+        .grid_2_2 h2 {
+          padding-left: 0;
         }
 
         .text {
@@ -171,8 +254,8 @@ import Slideshow from "../components/Slideshow.astro";
         }
 
         .grid_2_2 img {
-          max-width: 390px;
-          margin-top: 30px;
+          max-width: 320px;
+          margin-top: 50px;
           display: unset;
           margin-left: 50px;
         }
@@ -191,35 +274,6 @@ import Slideshow from "../components/Slideshow.astro";
         .is {
           width: 80%;
           padding-top: 25%;
-        }
-        p {
-          padding-left: 104px;
-          padding-right: 104px;
-        }
-      }
-      @media (min-width: 768px) {
-        h1 {
-          padding-left: 104px;
-        }
-
-        .grid_1_1 {
-          padding: 5% 3%;
-        }
-
-        .is {
-          width: 40%;
-          padding-top: 13%;
-        }
-        p {
-          padding-left: 50px;
-          padding-right: 50px;
-        }
-
-        .grid_1_1 {
-          background-color: white;
-          color: black;
-          margin-left: 104px;
-          margin-right: 104px;
         }
       }
     </style>
