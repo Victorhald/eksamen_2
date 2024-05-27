@@ -5,6 +5,13 @@ import Gulis from "../components/Gulis.astro";
 import Blandetis from "../components/Blandetis.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtucGFzbm9qbmJybXBwa2JodmhzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4MDI0MzgsImV4cCI6MjAzMTM3ODQzOH0.eV1A8Lk9Z7NfumZ5D9SRoNkwuK49yVj8DYHv3q0-bNM",
+  },
+}).then((response) => response.json());
 ---
 
 <html lang="en">
@@ -74,21 +81,18 @@ import Footer from "../components/Footer.astro";
               <Knap href="/coolbox" button_text="BESTIL OG LÆS MERE" variant="blaa" class="button" />
             </div>
           </div>
+          <div>
+            <img class="gelatopige" src="/img/hjemmelavetis.webp" alt="gelato_pige" />
+          </div>
         </div>
-
-        <div>
-          <img class="gelatopige" src="/img/hjemmelavetis.webp" alt="gelato_pige" />
-        </div>
+        <Blandetis sizeandplace="index" />
       </section>
-
-      <Blandetis sizeandplace="index" />
     </main>
     <div class="bestsellers">
       <h3>PRØV VORES BESTSELLERS</h3>
       <div class="grid_4">
         <div>
           <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-
           <h4>PISTACIE</h4>
         </div>
         <div>
@@ -104,11 +108,10 @@ import Footer from "../components/Footer.astro";
           <h4>CHOKOLADE</h4>
         </div>
       </div>
-      
-        <div class="button button_orange">
-          <Knap href="/isvarianter" button_text="SE ALLE ISVARIANTER" variant="orange" />
-        </div>
-      
+
+      <div class="button button_orange">
+        <Knap href="/isvarianter" button_text="SE ALLE ISVARIANTER" variant="orange" />
+      </div>
     </div>
   </body>
 </html>
