@@ -7,6 +7,12 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Singleis from "../components/Singleis.astro";
 import Bestsellers from "../components/Bestsellers.astro";
+const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtucGFzbm9qbmJybXBwa2JodmhzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4MDI0MzgsImV4cCI6MjAzMTM3ODQzOH0.eV1A8Lk9Z7NfumZ5D9SRoNkwuK49yVj8DYHv3q0-bNM",
+  },
+}).then((response) => response.json());
 
 const { myData } = Astro.props;
 console.log(data);
