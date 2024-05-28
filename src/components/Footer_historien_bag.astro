@@ -42,16 +42,15 @@ import "../styles/style.css";
     </div>
   </div>
 
-  <div>
+  <div class="logo_container">
     <img src="/img/logo.webp" alt="SI Logo" class="logo" />
   </div>
 </div>
 
 <div class="footer_grid_web">
   <div>
-    <img src="/img/logo.webp" alt="SI Logo" class="logo" />
+    <a href="/index"><img src="/img/logo.webp" alt="SI Logo" class="logo" /></a>
   </div>
-
   <div>
     <h4>Kontakt</h4>
     <p>+45 30 22 30 89</p>
@@ -60,12 +59,12 @@ import "../styles/style.css";
     <br />
     <br />
     <div class="some_grid">
-      <div>
+      <a href="https://www.facebook.com/sicilianskis" target="{target}">
         <img src="/img/facebook.svg" alt="Facebook Logo" class="icon" />
-      </div>
-      <div>
+      </a>
+      <a href="https://www.instagram.com/sicilianskis/">
         <img src="/img/instagram.svg" alt="Instagram Logo" class="icon" />
-      </div>
+      </a>
       <div class="rapport_container">
         <a href="https://www.findsmiley.dk/Sider/Search.aspx?k=31367778"> <img src="/img/rapport.svg" alt="Kontrolrapport logo" class="rapport" /></a>
       </div>
@@ -88,120 +87,134 @@ import "../styles/style.css";
     <p>Skjolds Plads 2,</p>
     <p>2200 København N</p>
   </div>
-</div>
 
-<style>
-  .footer_grid_web {
-    display: none;
-  }
-
-  body {
-    background-color: #f2f7fa;
-  }
-
-  a {
-    text-decoration: none;
-    color: #12375b;
-    font-family: system-ui, sans-serif;
-    font-size: 0.8rem;
-    line-height: 2;
-    font-weight: 200;
-  }
-
-  h4 {
-    font-family: system-ui, sans-serif;
-    font-weight: 500;
-    letter-spacing: 2%;
-    text-transform: unset;
-    margin-bottom: 15px;
-  }
-
-  .footer_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: auto;
-    padding: 45px 0;
-    gap: 40px;
-    margin-left: 45px;
-    background-color: #dfebf3;
-  }
-
-  .genveje {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .some_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* Tre like brede kolonner */
-    gap: 10px;
-    /* Mellomrom mellom elementene, valgfritt */
-    width: 70%;
-  }
-
-  .rapport_container {
-    grid-column: span 2;
-    /* Får denne til å spenne over to kolonner */
-  }
-
-  /* Tilpass ikonene hvis nødvendig */
-  .icon,
-  .rapport {
-    width: 98%;
-    height: auto;
-  }
-
-  .logo {
-    max-width: 120px;
-  }
-
-  @media (min-width: 1024px) {
-    .footer_grid {
+  <style>
+    .footer_grid_web {
       display: none;
     }
-
-    .footer_grid_web {
-      display: grid;
-      grid-template-columns: 0.6fr 1fr 1fr 1fr;
-      padding: 40px;
+    .footer_grid_web,
+    .footer_grid {
       background-color: #dfebf3;
     }
-
-    p,
     a {
-      font-size: 1.1rem;
+      text-decoration: none;
+      color: #12375b;
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
       line-height: 2;
+      font-weight: 200;
     }
 
     h4 {
-      font-size: 1.2rem;
+      font-family: system-ui, sans-serif;
+      font-weight: 500;
+      letter-spacing: 2%;
+      text-transform: unset;
+      margin-bottom: 15px;
     }
-  }
 
-  @media (min-width: 900px) {
-    .footer_grid_web {
+    .footer_grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      padding: 100px 60px;
+      grid-template-columns: 1fr 1fr;
+      margin: 40px auto;
+      gap: 35px;
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+
+    .genveje {
+      display: flex;
+      flex-direction: column;
     }
 
     .some_grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      /* Tre like brede kolonner */
-      gap: 15px;
-      /* Mellomrom mellom elementene, valgfritt */
-      width: 40%;
-      margin-top: 20px;
+      grid-template-columns: repeat(3, 1fr); /* Tre like brede kolonner */
+      gap: 10px; /* Mellomrom mellom elementene, valgfritt */
+      width: 70%;
     }
 
-    .icon {
-      width: 100%;
+    .rapport_container {
+      grid-column: span 2;
     }
 
-    .logo {
-      width: 55%;
+    .icon,
+    .rapport {
+      width: 98%;
+      height: auto;
     }
-  }
-</style>
+    .logo_container {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      height: 10vh;
+    }
+
+    img.logo {
+      max-width: 120px;
+      height: auto;
+      margin-left: 0;
+    }
+
+    @media (min-width: 768px) {
+      .footer_grid {
+        display: none;
+      }
+      .footer_grid_web {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 50px 60px;
+      }
+
+      .some_grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Tre like brede kolonner */
+        gap: 15px; /* Mellomrom mellom elementene, valgfritt */
+        width: 60%;
+        margin-top: 20px;
+      }
+
+      .icon {
+        width: 100%;
+      }
+
+      .logo {
+        width: 120px;
+      }
+
+      p,
+      a {
+        font-size: 1rem;
+        line-height: 2;
+      }
+    }
+    @media (min-width: 1024px) {
+      .footer_grid {
+        display: none;
+      }
+      .footer_grid_web {
+        display: grid;
+        grid-template-columns: 0.6fr 1fr 1fr 1fr;
+        margin: 80px 160px;
+        gap: 60px;
+      }
+
+      p,
+      a {
+        font-size: 1.1rem;
+        line-height: 2;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+      }
+
+      .some_grid {
+        width: 45%;
+      }
+      .logo {
+        margin-left: 104px;
+      }
+    }
+  </style>
+</div>
