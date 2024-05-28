@@ -6,7 +6,7 @@ import Blandetis from "../components/Blandetis.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Singleis from "../components/Singleis.astro";
-import Bestsellers from "../components/Bestsellers.astro";
+
 const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
   method: "GET",
   headers: {
@@ -96,360 +96,367 @@ console.log(data);
         <h3>PRØV VORES BESTSELLERS</h3>
         <div class="grid_4">
           <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-            <h4>PISTACIE</h4>
+            <a href="/is/pistachie">
+              <img src="/img/varianter/pistachie.webp" alt="hej" />
+              <h4>PISTACIE</h4>
+            </a>
           </div>
           <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-            <h4>HASSELNØD</h4>
+            <a href="/is/hasselnoed">
+              <img src="/img/varianter/hasselnoed.webp" alt="hej" />
+              <h4>HASSELNØD</h4>
+            </a>
           </div>
           <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-            <h4>JORDBÆR SORBET</h4>
+            <a href="/is/jordbær-sorbet">
+              <img src="/img/varianter/jordbær.webp" alt="hej" />
+              <h4>JORDBÆR SORBET</h4></a
+            >
           </div>
           <div>
-            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-            <h4>CHOKOLADE</h4>
+            <a href="/is/chokolade">
+              <img src="/img/varianter/choko.webp" alt="hej" />
+              <h4>CHOKOLADE</h4>
+            </a>
           </div>
         </div>
-        <section class="supabase">
-          {
-            data.map((is) => {
-              return <Bestsellers data={is} />;
-            })
-          }
-        </section>
-        <div class="button button_orange">
-          <Knap href="/isvarianter" button_text="SE ALLE ISVARIANTER" variant="orange" />
-        </div>
+      </div>
+
+      <div class="button button_orange">
+        <Knap href="/isvarianter" button_text="SE ALLE ISVARIANTER" variant="orange" />
       </div>
     </main>
   </body>
-  <Footer />
+</html>
+<Footer />
 
-  <style>
-    h1 {
-      background-image: url(/img/hero_billede.webp);
-      background-size: cover;
-      text-align: center;
-    }
+<style>
+  h1 {
+    background-image: url(/img/hero_billede.webp);
+    background-size: cover;
+    text-align: center;
+  }
 
-    hr {
-      border: none;
-      height: 1px;
-      background-color: #12375b;
-      width: 120px;
-      margin: 20px auto;
-    }
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #12375b;
+    width: 120px;
+    margin: 20px auto;
+  }
 
-    .h2_forside {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .labels_forside {
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      padding-top: 20px;
-      padding-bottom: 85px;
-      margin-left: 24px;
-      margin-right: 24px;
-      gap: 30px;
-    }
-    h3 {
-      margin-left: 24px;
-      padding-top: 20px;
-      line-height: 35px;
-      margin-right: 24px;
-    }
+  .h2_forside {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .labels_forside {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 85px;
+    margin-left: 24px;
+    margin-right: 24px;
+    gap: 30px;
+  }
+  h3 {
+    margin-left: 24px;
+    padding-top: 20px;
+    line-height: 35px;
+    margin-right: 24px;
+  }
 
-    .hjemmelavetis {
-      width: 350px;
-      padding-bottom: 20px;
-      line-height: 30px;
-    }
-    .hjemmelavetis,
-    .button,
-    h4 {
-      margin-left: 24px;
-    }
+  .hjemmelavetis {
+    width: 350px;
+    padding-bottom: 20px;
+    line-height: 30px;
+  }
+  .hjemmelavetis,
+  .button,
+  h4 {
+    margin-left: 24px;
+  }
 
-    section {
-      position: relative;
-    }
+  section {
+    position: relative;
+  }
 
-    .hero {
-    }
-    .button {
-      margin-bottom: 60px;
-    }
+  .hero {
+  }
+  .button {
+    margin-bottom: 60px;
+  }
 
-    .findpåkort {
-      margin-left: 0;
-    }
-    .is_priser_grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      text-align: center;
-      padding-bottom: 30px;
-      align-items: center;
-      margin-left: 0;
-      margin-right: 37px;
-      place-items: center;
-    }
+  .findpåkort {
+    margin-left: 0;
+  }
+  .is_priser_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding-bottom: 30px;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 37px;
+    place-items: center;
+  }
 
+  .lilleis {
+    width: 80px;
+    margin-left: 30px;
+  }
+
+  .lilleis .lilleis_tekst {
+    margin-left: 30px;
+  }
+  .mellemis {
+    width: 100px;
+  }
+
+  .storis {
+    width: 120px;
+  }
+
+  .gelatopige {
+    width: 245px;
+    margin-left: 24px;
+    height: 291px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+  }
+  .button_orange {
+    margin-top: 30px;
+  }
+
+  .is_priser,
+  .bestsellers {
+    background-color: #dfebf3;
+    padding-top: 7px;
+  }
+
+  .bestsellers {
+    padding-bottom: 3px;
+  }
+  .grid_4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    place-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .grid_4 img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  .norrebro,
+  .vesterbro {
+    width: 155px;
+    height: 290px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .aabninstider {
+    font-weight: 1000;
+  }
+
+  @media (min-width: 768px) {
     .lilleis {
-      width: 80px;
-      margin-left: 30px;
+      width: 160px;
+      margin-left: 0;
+    }
+    .lilleis_tekst {
+      margin-left: 0;
     }
 
-    .lilleis .lilleis_tekst {
-      margin-left: 30px;
-    }
     .mellemis {
-      width: 100px;
+      width: 180px;
     }
 
     .storis {
-      width: 120px;
+      width: 200px;
     }
-
-    .gelatopige {
-      width: 245px;
-      margin-left: 24px;
-      height: 291px;
-      margin-bottom: 30px;
-      border-radius: 25px;
-    }
-    .button_orange {
-      margin-top: 30px;
-    }
-
-    .is_priser,
-    .bestsellers {
-      background-color: #dfebf3;
-      padding-top: 7px;
-    }
-
-    .bestsellers {
-      padding-bottom: 3px;
-    }
-    .grid_4 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      place-items: center;
+    .is_priser_grid {
       margin-left: 50px;
       margin-right: 50px;
     }
-
+    h3 {
+      margin-left: 50px;
+      margin-bottom: 20px;
+      margin-right: 50px;
+    }
+    .hjemmelavetis {
+      margin-left: 50px;
+    }
+    .button {
+      margin-left: 50px;
+    }
+    .grid_4 {
+      place-items: center;
+    }
+    .gelato {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+    }
+    .gelatopige {
+      width: 270px;
+      height: 350px;
+      margin-left: 0;
+      padding-top: 0;
+      margin-top: 60px;
+      margin-right: 50px;
+      gap: 0;
+    }
+    .h3 {
+      padding-top: 40px;
+    }
+    h4 {
+      text-align: center;
+      margin-left: 0;
+      padding-top: 20px;
+    }
     .norrebro,
     .vesterbro {
-      width: 155px;
-      height: 290px;
+      width: 220px;
+      height: 310px;
       background-color: #ffffff;
       border-radius: 25px;
       padding-top: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+    .button_orange {
+      margin-top: 30px;
+    }
+    .grid_4 img {
+      width: 200px;
+    }
+  }
 
-    .aabninstider {
-      font-weight: 1000;
+  @media (min-width: 1024px) {
+    .labels_forside {
+      gap: 50px;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    .hjemmelavetis {
+      margin-left: 104px;
+      margin-top: 30px;
+      width: 600px;
+    }
+    .button {
+      margin-left: 104px;
+      padding-top: 20px;
+    }
+    .gelato {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 30px;
     }
 
-    @media (min-width: 768px) {
-      .lilleis {
-        width: 160px;
-        margin-left: 0;
-      }
-      .lilleis_tekst {
-        margin-left: 0;
-      }
-
-      .mellemis {
-        width: 180px;
-      }
-
-      .storis {
-        width: 200px;
-      }
-      .is_priser_grid {
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-      h3 {
-        margin-left: 50px;
-        margin-bottom: 20px;
-        margin-right: 50px;
-      }
-      .hjemmelavetis {
-        margin-left: 50px;
-      }
-      .button {
-        margin-left: 50px;
-      }
-      .grid_4 {
-        place-items: center;
-      }
-      .gelato {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-      }
-      .gelatopige {
-        width: 270px;
-        height: 350px;
-        margin-left: 0;
-        padding-top: 0;
-        margin-top: 60px;
-        margin-right: 50px;
-        gap: 0;
-      }
-      .h3 {
-        padding-top: 40px;
-      }
-      h4 {
-        text-align: center;
-        margin-left: 0;
-        padding-top: 20px;
-      }
-      .norrebro,
-      .vesterbro {
-        width: 220px;
-        height: 310px;
-        background-color: #ffffff;
-        border-radius: 25px;
-        padding-top: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      .button_orange {
-        margin-top: 30px;
-      }
-      .grid_4 img {
-        width: 200px;
-      }
+    .gelatopige {
+      width: 468px;
+      height: 512px;
+      margin-left: 0;
+      margin-top: 30px;
     }
 
-    @media (min-width: 1024px) {
-      .labels_forside {
-        gap: 50px;
-        padding-top: 80px;
-        padding-bottom: 80px;
-      }
-      .hjemmelavetis {
-        margin-left: 104px;
-        margin-top: 30px;
-        width: 600px;
-      }
-      .button {
-        margin-left: 104px;
-        padding-top: 20px;
-      }
-      .gelato {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        gap: 30px;
-      }
-
-      .gelatopige {
-        width: 468px;
-        height: 512px;
-        margin-left: 0;
-        margin-top: 30px;
-      }
-
-      .grid_4 {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        gap: 100px;
-        margin-left: 104px;
-        margin-right: 104px;
-      }
-      .p_labels {
-        font-size: 1.6rem;
-        line-height: 40px;
-      }
-
-      .norrebro,
-      .vesterbro {
-        width: 400px;
-        height: 440px;
-        background-color: #ffffff;
-        border-radius: 25px;
-        padding-top: 37px;
-      }
-
-      h2 {
-        padding-top: 20px;
-      }
-      h3 {
-        margin-left: 104px;
-        padding-top: 50px;
-        line-height: 60px;
-        margin-right: 104px;
-      }
-      .h3 {
-        margin-left: 104px;
-        padding-top: 70px;
-      }
-
-      .is_priser_grid {
-        margin-left: 0;
-        margin-right: 104px;
-        place-items: center;
-        padding-top: 40px;
-      }
-      .lilleis {
-        width: 230px;
-        margin-left: 90px;
-      }
-      .lilleis_tekst {
-        margin-left: 90px;
-      }
-
-      .mellemis {
-        width: 260px;
-      }
-
-      .storis {
-        width: 290px;
-      }
+    .grid_4 {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      gap: 100px;
+      margin-left: 104px;
+      margin-right: 104px;
     }
-    @media (min-width: 1200px) {
-      .lilleis {
-        width: 250px;
-        margin-left: 90px;
-      }
-      .lilleis_tekst {
-        margin-left: 90px;
-      }
-
-      .mellemis {
-        width: 280px;
-      }
-
-      .storis {
-        width: 310px;
-      }
+    .p_labels {
+      font-size: 1.6rem;
+      line-height: 40px;
     }
 
-    @media (min-width: 1300px) {
-      .lilleis {
-        width: 270px;
-        margin-left: 90px;
-      }
-      .lilleis_tekst {
-        margin-left: 90px;
-      }
-
-      .mellemis {
-        width: 300px;
-      }
-
-      .storis {
-        width: 330px;
-      }
+    .norrebro,
+    .vesterbro {
+      width: 400px;
+      height: 440px;
+      background-color: #ffffff;
+      border-radius: 25px;
+      padding-top: 37px;
     }
-  </style>
-</html>
+
+    h2 {
+      padding-top: 20px;
+    }
+    h3 {
+      margin-left: 104px;
+      padding-top: 50px;
+      line-height: 60px;
+      margin-right: 104px;
+    }
+    .h3 {
+      margin-left: 104px;
+      padding-top: 70px;
+    }
+
+    .is_priser_grid {
+      margin-left: 0;
+      margin-right: 104px;
+      place-items: center;
+      padding-top: 40px;
+    }
+    .lilleis {
+      width: 230px;
+      margin-left: 90px;
+    }
+    .lilleis_tekst {
+      margin-left: 90px;
+    }
+
+    .mellemis {
+      width: 260px;
+    }
+
+    .storis {
+      width: 290px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .lilleis {
+      width: 250px;
+      margin-left: 90px;
+    }
+    .lilleis_tekst {
+      margin-left: 90px;
+    }
+
+    .mellemis {
+      width: 280px;
+    }
+
+    .storis {
+      width: 310px;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    .lilleis {
+      width: 270px;
+      margin-left: 90px;
+    }
+    .lilleis_tekst {
+      margin-left: 90px;
+    }
+
+    .mellemis {
+      width: 300px;
+    }
+
+    .storis {
+      width: 330px;
+    }
+  }
+</style>
