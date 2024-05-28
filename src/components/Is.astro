@@ -5,7 +5,7 @@ import "../styles/style.css";
 const { data } = Astro.props;
 ---
 
-<a href={`is/${data.slug}`}>
+<a href={`/is/${data.slug}`}>
   <article class="produkt_liste">
     <div class="produkt_div">
       <img class="is_img" src={"/img/varianter/" + data.image} alt="is" />
