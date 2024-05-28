@@ -31,16 +31,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 40px;
     padding-bottom: 90px;
-    background-image: url(/img/headerbillede.png);
+    background-image: url(/img/markise.png);
     background-size: contain;
     background-repeat: no-repeat;
   }
 
   .logo {
-    height: 100px;
-    margin-left: 10px;
+    height: 85px;
+    margin-top: 3px;
+    margin-left: 3px;
   }
 
   .menu {
@@ -64,6 +64,7 @@
     color: #ea9942;
     text-transform: uppercase;
     font-size: 1.1rem;
+    font-weight: 500;
     font-family: system-ui, sans-serif;
     padding: 30px;
   }
@@ -92,27 +93,30 @@
     }
 
     .logo {
-      height: 70px;
-      margin-left: 10px;
+      height: 65px;
+      margin-left: 0px;
       padding-top: 5px;
     }
   }
 
-  /* Media Query for mindre skærme */
+  /* Media Query for mobil */
   @media (max-width: 768px) {
     .logo {
-      height: 40px;
-      margin-left: 0;
+      height: 47px;
+      margin-left: 0.7px;
+      padding-top: 0;
+      margin-top: 2px;
     }
     .menu {
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 90px;
+      top: 50px;
       right: 0;
-      background: white;
+      background: #f2f7fa;
       width: 100%;
       text-align: center;
+      z-index: 1;
     }
 
     .menu li {
@@ -125,6 +129,18 @@
     header {
       padding-top: 0;
       padding-right: 15px;
+    }
+
+    header {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 90px;
+      background-image: url(/img/markise_mobil.png);
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
   .menu.active {

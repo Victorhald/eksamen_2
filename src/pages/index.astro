@@ -8,13 +8,6 @@ import Footer from "../components/Footer.astro";
 import Singleis from "../components/Singleis.astro";
 import Bestsellers from "../components/Bestsellers.astro";
 
-const data = await fetch("https://knpasnojnbrmppkbhvhs.supabase.co/rest/v1/products", {
-  method: "GET",
-  headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtucGFzbm9qbmJybXBwa2JodmhzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4MDI0MzgsImV4cCI6MjAzMTM3ODQzOH0.eV1A8Lk9Z7NfumZ5D9SRoNkwuK49yVj8DYHv3q0-bNM",
-  },
-}).then((response) => response.json());
-
 const { myData } = Astro.props;
 console.log(data);
 ---
@@ -92,38 +85,39 @@ console.log(data);
         </div>
         <Blandetis sizeandplace="index" />
       </section>
+
+      <div class="bestsellers">
+        <h3>PRØV VORES BESTSELLERS</h3>
+        <div class="grid_4">
+          <div>
+            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
+            <h4>PISTACIE</h4>
+          </div>
+          <div>
+            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
+            <h4>HASSELNØD</h4>
+          </div>
+          <div>
+            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
+            <h4>JORDBÆR SORBET</h4>
+          </div>
+          <div>
+            <img src="/public/img/varianter/chokolade.svg" alt="hej" />
+            <h4>CHOKOLADE</h4>
+          </div>
+        </div>
+        <section class="supabase">
+          {
+            data.map((is) => {
+              return <Bestsellers data={is} />;
+            })
+          }
+        </section>
+        <div class="button button_orange">
+          <Knap href="/isvarianter" button_text="SE ALLE ISVARIANTER" variant="orange" />
+        </div>
+      </div>
     </main>
-    <div class="bestsellers">
-      <h3>PRØV VORES BESTSELLERS</h3>
-      <div class="grid_4">
-        <div>
-          <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-          <h4>PISTACIE</h4>
-        </div>
-        <div>
-          <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-          <h4>HASSELNØD</h4>
-        </div>
-        <div>
-          <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-          <h4>JORDBÆR SORBET</h4>
-        </div>
-        <div>
-          <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-          <h4>CHOKOLADE</h4>
-        </div>
-      </div>
-      <section class="supabase">
-        {
-          data.map((is) => {
-            return <Bestsellers data={is} />;
-          })
-        }
-      </section>
-      <div class="button button_orange">
-        <Knap href="/isvarianter" button_text="SE ALLE ISVARIANTER" variant="orange" />
-      </div>
-    </div>
   </body>
   <Footer />
 
