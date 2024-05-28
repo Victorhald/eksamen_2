@@ -95,25 +95,25 @@ console.log(data);
       <div class="bestsellers">
         <h3>PRØV VORES BESTSELLERS</h3>
         <div class="grid_4">
-          <div>
+          <div class="besteller_variant">
             <a href="/is/pistachie">
               <img src="/img/varianter/pistachie.webp" alt="hej" />
               <h4>PISTACIE</h4>
             </a>
           </div>
-          <div>
+          <div class="besteller_variant">
             <a href="/is/hasselnoed">
               <img src="/img/varianter/hasselnoed.webp" alt="hej" />
               <h4>HASSELNØD</h4>
             </a>
           </div>
-          <div>
+          <div class="besteller_variant">
             <a href="/is/jordbær-sorbet">
               <img src="/img/varianter/jordbaer.webp" alt="hej" />
               <h4>JORDBÆR SORBET</h4></a
             >
           </div>
-          <div>
+          <div class="besteller_variant">
             <a href="/is/chokolade">
               <img src="/img/varianter/choko.webp" alt="hej" />
               <h4>CHOKOLADE</h4>
@@ -237,6 +237,16 @@ console.log(data);
   .bestsellers {
     padding-bottom: 3px;
   }
+
+  .bestsellers a {
+    text-decoration: none;
+  }
+
+  .bestsellers .besteller_variant:hover {
+    transition: 0.4s ease;
+    scale: 1.1;
+  }
+
   .grid_4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
