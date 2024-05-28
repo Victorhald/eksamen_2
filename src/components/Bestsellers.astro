@@ -1,8 +1,18 @@
 ---
-
+const { data } = Astro.props;
 ---
 
-<div>
-  <img src="/public/img/varianter/chokolade.svg" alt="hej" />
-  <h4>{data.name}</h4>
-</div>
+<section>
+  <img src="" alt="" />
+  <h4></h4>
+  <!-- {data.bestsellers && <img class="bestsellers" src={data.bestsellers} alt="bestseller is" />} -->
+
+  {data.bestsellers && <img class="allergy" src={"/img/varianter/" + data.bestsellers} alt="is" />}
+</section>
+<style>
+  .allergy img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+</style>
