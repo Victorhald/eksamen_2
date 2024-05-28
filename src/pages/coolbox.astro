@@ -121,61 +121,63 @@ import Gulis from "../components/Gulis.astro";
                 <p><img src="/img/nut.webp" alt="Nut" class="icon" /> = Indeholder nødder</p>
               </div>
             </div>
-            <button type="submit">Send</button>
           </form>
           <Gulis sizeandplace="coolbox" />
         </section>
         <section>
-          <div class="afsnit_2">
-            <h2 class="h2">SKRIV DINE OPLYSNINGER NEDENFOR</h2>
+          <form>
+            <div class="afsnit_2">
+              <h2 class="h2">SKRIV DINE OPLYSNINGER NEDENFOR</h2>
 
-            <p class="tekst_2">Vi bestræber os efter at vende tilbage indenfor 2 hverdage.</p>
-          </div>
-
-          <div class="oplysninger_form">
-            <div>
-              <label for="name">Fulde navn:</label>
-              <input type="text" id="name" name="name" required />
+              <p class="tekst_2">Vi bestræber os efter at vende tilbage indenfor 2 hverdage.</p>
             </div>
 
-            <div>
-              <label for="email">E-mail:</label>
-              <input type="email" id="email" name="email" required />
-            </div>
+            <div class="oplysninger_form">
+              <div>
+                <label for="name">Fulde navn:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
 
-            <div>
-              <label for="phone">Telefonnummer:</label>
-              <input type="tel" id="tel" name="tel" required />
-            </div>
+              <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
 
-            <div>
-              <label for="date_time">Vælg dato og tidsrum:</label>
-              <input type="datetime-local" id="date_time" name="date_time" />
-            </div>
+              <div>
+                <label for="phone">Telefonnummer:</label>
+                <input type="tel" id="tel" name="tel" required />
+              </div>
 
-            <div>
-              <label for="address">Adresse:</label>
-              <input type="text" id="address" name="address" required />
-            </div>
+              <div>
+                <label for="date_time">Vælg dato og tidsrum:</label>
+                <input type="datetime-local" id="date_time" name="date_time" />
+              </div>
 
-            <div>
-              <label for="delivery-method">Vælg leveringsmetode:</label>
-              <select id="delivery-method" name="delivery-method" required>
-                <option value="">Vælg en metode</option>
-                <option value="delivery">Levering</option>
-                <option value="pickup">Afhentning</option>
-              </select>
-            </div>
+              <div>
+                <label for="address">Adresse:</label>
+                <input type="text" id="address" name="address" required />
+              </div>
 
-            <div>
-              <label for="message">Kommentarer eller spørgsmål?</label>
-              <textarea id="message" name="message" rows="4"></textarea>
+              <div>
+                <label for="delivery-method">Vælg leveringsmetode:</label>
+                <select id="delivery-method" name="delivery-method" required>
+                  <option value="">Vælg en metode</option>
+                  <option value="delivery">Levering</option>
+                  <option value="pickup">Afhentning</option>
+                </select>
+              </div>
 
-              <div class="button">
-                <Knap type="submit" button_text="SEND" variant="orange" class="button" type="submit" />
+              <div>
+                <label for="message">Kommentarer eller spørgsmål?</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <!-- <div class="button">
+                  <Knap type="submit" button_text="SEND" variant="orange" class="button" type="submit" />
+                </div> -->
               </div>
             </div>
-          </div>
+            <button class="orange_knap" type="submit">Send</button>
+          </form>
         </section>
         <script>
           document.querySelectorAll('input[name="variants"]').forEach((checkbox) => {
@@ -225,6 +227,28 @@ import Gulis from "../components/Gulis.astro";
     }
     section {
       position: relative;
+    }
+    .orange_knap {
+      background-color: #e8a965;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      height: 35px;
+      padding: 0 20px;
+      font-size: 0.86px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-family: "Margarine";
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+      letter-spacing: 0.8px;
+    }
+    .orange_knap:hover {
+      transform: scale(1.2);
     }
 
     .is_skilt_container {
