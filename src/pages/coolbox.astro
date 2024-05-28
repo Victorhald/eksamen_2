@@ -174,9 +174,9 @@ import Gulis from "../components/Gulis.astro";
                 <!-- <div class="button">
                   <Knap type="submit" button_text="SEND" variant="orange" class="button" type="submit" />
                 </div> -->
+                <button class="orange_knap" type="submit">SEND</button>
               </div>
             </div>
-            <button class="orange_knap" type="submit">Send</button>
           </form>
         </section>
         <script>
@@ -220,7 +220,6 @@ import Gulis from "../components/Gulis.astro";
     h1 {
       padding-left: 24px;
       background-image: url(/img/coolbox_hero.webp);
-      background-attachment: fixed;
       background-size: cover;
       position: relative;
       z-index: -1;
@@ -234,7 +233,7 @@ import Gulis from "../components/Gulis.astro";
       border: none;
       border-radius: 25px;
       height: 35px;
-      padding: 0 20px;
+      padding: 0 40px;
       font-size: 0.86px;
       cursor: pointer;
       display: inline-flex;
@@ -366,7 +365,7 @@ import Gulis from "../components/Gulis.astro";
     .tekst_2 {
       margin-bottom: 35px;
     }
-    .button {
+    .orange_knap {
       display: flex;
       margin: 0 auto;
     }
@@ -492,7 +491,9 @@ import Gulis from "../components/Gulis.astro";
       label {
         font-size: 1.3rem;
       }
-
+      h1 {
+        background-attachment: fixed;
+      }
       .variant label {
         font-weight: 100;
       }
@@ -532,7 +533,7 @@ import Gulis from "../components/Gulis.astro";
         max-width: 600px;
       }
 
-      .button {
+      .orange_knap {
         margin-top: 20px;
       }
 
