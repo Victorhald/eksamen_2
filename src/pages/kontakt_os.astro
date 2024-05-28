@@ -41,10 +41,8 @@ import Blandetis from "../components/Blandetis.astro";
 
             <label for="message">Besked:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
-            <div class="button">
-              <Knap button_text="SEND" variant="orange" class="button" type="submit" />
-            </div>
-            <button type="submit">Send</button>
+
+            <button class="orange_knap" type="submit">Send</button>
           </form>
         </div>
       </div>
@@ -66,6 +64,38 @@ import Blandetis from "../components/Blandetis.astro";
         label {
           font-family: "Margarine";
           text-transform: uppercase;
+        }
+        .orange_knap {
+          background-color: #e8a965;
+          color: white;
+          border: none;
+          border-radius: 25px;
+          height: 35px;
+          padding: 0 20px;
+          font-size: 0.86px;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          font-size: 1rem;
+          font-family: "Margarine";
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+          transition: transform 0.2s ease;
+          letter-spacing: 0.8px;
+
+          width: 20%;
+          margin-top: 20px;
+
+          margin-bottom: 35px;
+
+          border: 0px solid #ccc;
+          border-radius: 25px;
+          box-sizing: border-box;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .orange_knap:hover {
+          transform: scale(1.2);
         }
 
         p {
