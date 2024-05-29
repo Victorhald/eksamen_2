@@ -19,6 +19,7 @@ const { sizeandplace } = Astro.props;
   }
 
   .index {
+    display: none;
     position: absolute;
     width: 130px;
     bottom: 0px;
@@ -46,6 +47,7 @@ const { sizeandplace } = Astro.props;
   }
   @media (min-width: 1024px) {
     .index {
+      display: unset;
       width: 200px;
       left: 500px;
     }

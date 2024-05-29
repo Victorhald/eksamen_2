@@ -89,7 +89,7 @@ console.log(data);
             <img class="gelatopige" src="/img/hjemmelavetis.webp" alt="gelato_pige" />
           </div>
         </div>
-        <Blandetis sizeandplace="index" />
+        <Blandetis sizeandplace="index" class="blandetis" />
       </section>
 
       <div class="bestsellers">
@@ -280,6 +280,9 @@ console.log(data);
     font-weight: 1000;
   }
 
+  #blandetis_sprite {
+    display: none;
+  }
   @media (min-width: 768px) {
     .lilleis {
       width: 160px;
@@ -439,6 +442,10 @@ console.log(data);
 
     .storis {
       width: 290px;
+    }
+
+    #blandetis_sprite {
+      display: unset;
     }
   }
   @media (min-width: 1200px) {
