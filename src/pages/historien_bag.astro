@@ -81,7 +81,7 @@ import Slideshow from "../components/Slideshow.astro";
       .hero_billede {
         position: relative;
         background-image: url(/img/hero_billede_historienbag.png);
-        background-attachment: fixed;
+
         padding-bottom: 20px;
         z-index: -1;
       }
@@ -137,6 +137,7 @@ import Slideshow from "../components/Slideshow.astro";
       }
       footer {
         background-color: #dfebf3;
+        padding: 40px 0;
       }
 
       @media (min-width: 768px) {
@@ -202,6 +203,9 @@ import Slideshow from "../components/Slideshow.astro";
       @media (min-width: 1024px) {
         .historien_bag {
           padding-bottom: 0;
+        }
+        .hero_billede {
+          background-attachment: fixed;
         }
         .grid_1_1,
         .grid_2_2 {
