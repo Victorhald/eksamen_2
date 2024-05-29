@@ -71,8 +71,8 @@ import Blandetis from "../components/Blandetis.astro";
           border: none;
           border-radius: 25px;
           height: 35px;
-          padding: 0 20px;
-          font-size: 0.86px;
+          padding: 10px 35px;
+          font-size: 0.75px;
           cursor: pointer;
           display: inline-flex;
           align-items: center;
@@ -83,8 +83,6 @@ import Blandetis from "../components/Blandetis.astro";
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
           transition: transform 0.2s ease;
           letter-spacing: 0.8px;
-
-          width: 20%;
           margin-top: 20px;
 
           margin-bottom: 35px;
@@ -113,8 +111,7 @@ import Blandetis from "../components/Blandetis.astro";
         }
 
         .form-container input,
-        .form-container textarea,
-        .form-container button {
+        .form-container textarea {
           display: block;
           width: 100%;
           margin-bottom: 35px;
@@ -123,15 +120,6 @@ import Blandetis from "../components/Blandetis.astro";
           border-radius: 25px;
           box-sizing: border-box;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-container button {
-          background-color: #ecac67;
-          color: white;
-          cursor: pointer;
-          border: none;
-          width: 20%;
-          margin-top: 20px;
         }
         .is {
           width: 30%;
@@ -151,6 +139,11 @@ import Blandetis from "../components/Blandetis.astro";
           h1 {
             padding-left: 50px;
           }
+
+          .orange_knap {
+            padding: 25px 45px;
+            font-size: 0.89rem;
+          }
         }
 
         @media (min-width: 1024px) {
@@ -167,6 +160,10 @@ import Blandetis from "../components/Blandetis.astro";
           h1 {
             padding-left: 104px;
             background-attachment: fixed;
+          }
+
+          .orange_knap {
+            font-size: 1rem;
           }
         }
       </style>

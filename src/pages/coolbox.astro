@@ -233,19 +233,24 @@ import Gulis from "../components/Gulis.astro";
       border: none;
       border-radius: 25px;
       height: 35px;
-      padding: 0 40px;
-      font-size: 0.86px;
+      padding: 0px 35px;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       text-decoration: none;
       font-size: 0.75rem;
       font-family: "Margarine";
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       transition: transform 0.2s ease;
       letter-spacing: 0.8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
+
+    button.orange_knap {
+      width: 84px;
+      margin-left: 0px;
+    }
+
     .orange_knap:hover {
       transform: scale(1.2);
     }
@@ -349,7 +354,6 @@ import Gulis from "../components/Gulis.astro";
 
     .oplysninger_form input,
     .oplysninger_form textarea,
-    .oplysninger_form button,
     .oplysninger_form option,
     .oplysninger_form select {
       display: block;
@@ -481,6 +485,11 @@ import Gulis from "../components/Gulis.astro";
         width: 100%;
         height: 100%;
       }
+
+      .orange_knap {
+        padding: 25px 45px;
+        font-size: 0.89rem;
+      }
     }
 
     @media (min-width: 1024px) {
@@ -519,7 +528,6 @@ import Gulis from "../components/Gulis.astro";
 
       .oplysninger_form input,
       .oplysninger_form textarea,
-      .oplysninger_form button,
       .oplysninger_form option,
       .oplysninger_form select {
         display: block;
@@ -571,6 +579,10 @@ import Gulis from "../components/Gulis.astro";
       .afsnit1_2 {
         margin-top: 70px;
         margin-bottom: 70px;
+      }
+
+      .orange_knap {
+        font-size: 1rem;
       }
     }
   </style>
