@@ -24,6 +24,7 @@ console.log(data);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Besøg Siciliansk Is og oplev autentisk gelato lavet med økologiske ingredienser. De tilbyder et bredt udvalg af smage, inspireret af Siciliens rige kulinariske traditioner." />
     <title>Index</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -89,7 +90,7 @@ console.log(data);
             <img class="gelatopige" src="/img/hjemmelavetis.webp" alt="gelato_pige" />
           </div>
         </div>
-        <Blandetis sizeandplace="index" class="blandetis" />
+        <Blandetis sizeandplace="index" />
       </section>
 
       <div class="bestsellers">
@@ -280,9 +281,6 @@ console.log(data);
     font-weight: 1000;
   }
 
-  #blandetis_sprite {
-    display: none;
-  }
   @media (min-width: 768px) {
     .lilleis {
       width: 160px;
@@ -442,10 +440,6 @@ console.log(data);
 
     .storis {
       width: 290px;
-    }
-
-    #blandetis_sprite {
-      display: unset;
     }
   }
   @media (min-width: 1200px) {
