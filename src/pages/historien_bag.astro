@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import Footer_historien_bag from "../components/Footer_historien_bag.astro";
 import Header from "../components/Header.astro";
+import Gulis from "../components/Gulis.astro";
 import Slideshow from "../components/Slideshow.astro";
 ---
 
@@ -23,19 +24,21 @@ import Slideshow from "../components/Slideshow.astro";
     <main>
       <div class="hero_billede">
         <h1 class="historien_bag">Historien bag</h1>
-
-        <div class="grid_1_1">
-          <div>
-            <p>
-              Velkommen til Siciliansk Is! Vi er glade for at kunne dele vores passion for is med jer alle. <br />
-              <br /> Vores rejse begyndte med en dyb kærlighed til autentisk siciliansk gelato og en stærk forbindelse til Sicilien, der går tilbage til Davids families rødder. <br />
-              <br /> Da vi besluttede at åbne vores egen isbutik, vidste vi, at vi ville bringe den autentiske smag af Sicilien til København
-            </p>
+        <section>
+          <div class="grid_1_1">
+            <div>
+              <p>
+                Velkommen til Siciliansk Is! Vi er glade for at kunne dele vores passion for is med jer alle. <br />
+                <br /> Vores rejse begyndte med en dyb kærlighed til autentisk siciliansk gelato og en stærk forbindelse til Sicilien, der går tilbage til Davids families rødder. <br />
+                <br /> Da vi besluttede at åbne vores egen isbutik, vidste vi, at vi ville bringe den autentiske smag af Sicilien til København
+              </p>
+            </div>
+            <div>
+              <p>Vores is er produceret fra bunden i vores ene butik på Skydebanegade, med ingredienser importeret direkte fra Sicilien for at sikre, at vores gelato smager præcis som på Sicilien. <br /> <br /> Vi inviterer dig til at komme og smage vores is, og opleve et stykke af Sicilien her hos os. <br /> <br /> Velbekommen!</p>
+            </div>
           </div>
-          <div>
-            <p>Vores is er produceret fra bunden i vores ene butik på Skydebanegade, med ingredienser importeret direkte fra Sicilien for at sikre, at vores gelato smager præcis som på Sicilien. <br /> <br /> Vi inviterer dig til at komme og smage vores is, og opleve et stykke af Sicilien her hos os. <br /> <br /> Velbekommen!</p>
-          </div>
-        </div>
+          <Gulis sizeandplace="historien_bag" />
+        </section>
       </div>
 
       <div class="grid_2_2 grid_2_2_2_2">
@@ -102,6 +105,10 @@ import Slideshow from "../components/Slideshow.astro";
         padding: 7% 7% 0 7%;
       }
 
+      section {
+        position: relative;
+      }
+
       .grid_1_1,
       .grid_2_2 {
         padding: 8% 3%;
@@ -124,6 +131,8 @@ import Slideshow from "../components/Slideshow.astro";
         color: black;
         margin: 24px;
         opacity: 90%;
+        border-radius: 25px;
+        margin-top: 0;
       }
 
       .is {
@@ -180,9 +189,9 @@ import Slideshow from "../components/Slideshow.astro";
         .grid_1_1 {
           background-color: white;
           color: black;
-          margin-left: 104px;
-          margin-right: 104px;
-          border-radius: 45px;
+          margin-left: 50px;
+          margin-right: 50px;
+          border-radius: 25px;
         }
 
         .grid_2_2_2,
@@ -266,8 +275,9 @@ import Slideshow from "../components/Slideshow.astro";
           background-color: white;
           opacity: 90%;
           color: black;
-          margin: 50px;
-          border-radius: 40px;
+          margin-left: 104px;
+          margin-right: 104px;
+          border-radius: 25px;
         }
 
         h2 {
