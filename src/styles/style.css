@@ -53,6 +53,7 @@ p {
   line-height: 30px;
   font-weight: 200;
   letter-spacing: 0.5px;
+  color: #12375b;
 }
 
 @media (min-width: 768px) {
