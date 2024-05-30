@@ -32,6 +32,14 @@ const { sizeandplace } = Astro.props;
     left: 280px;
   }
 
+  .historien_bag {
+    aspect-ratio: 73/121;
+    width: 60px;
+    position: absolute;
+    bottom: 0px;
+    left: 260px;
+  }
+
   @media (min-width: 768px) {
     .index {
       width: 130px;
@@ -41,6 +49,10 @@ const { sizeandplace } = Astro.props;
       width: 130px;
       left: 600px;
     }
+    .historien_bag {
+      width: 85px;
+      left: 500px;
+    }
   }
   @media (min-width: 1024px) {
     .index {
@@ -49,6 +61,11 @@ const { sizeandplace } = Astro.props;
 
     .coolbox {
       width: 200px;
+      left: 1100px;
+    }
+
+    .historien_bag {
+      width: 100px;
       left: 1100px;
     }
   }
